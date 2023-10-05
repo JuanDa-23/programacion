@@ -3,8 +3,6 @@ import java.util.Scanner;
 public class Ejercicio6 {
         public static void main(String[] args) {
             // TODO: el radio podría ser real (con decimales), 2.5 por ejemplo
-
-
             Scanner in = new Scanner (System.in);
             System.out.println("Escribe el radio del circlo: ");
             int radio = in.nextInt();
