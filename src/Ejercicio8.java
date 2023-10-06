@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Ejercicio8 {
-
+//odio este portatil//
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Escribe un número:  ");
