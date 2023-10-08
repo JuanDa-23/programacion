@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Condicional14 {
+public class Ejercicio14 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("¿Cuántas personas vendrán al camping?");

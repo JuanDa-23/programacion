@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Condicional8 {
+public class Ejercicio8 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Vamos a convertir tus euros a dolares");

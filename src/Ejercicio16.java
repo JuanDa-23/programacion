@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Condicional16 {
+public class Ejercicio16 {
     public static void main(String[] args) {
         final double euroExchangeRate = 1.06;
         final double dollarExchangeRate = 0.96;

@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Condicional17 {
+public class Ejercicio17 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Vamos a calcular superficies y perimetros");

@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Condicional18 {
+public class Ejercicio18 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Introduce un número y calcularemos su raiz cuadrada: ");

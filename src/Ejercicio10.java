@@ -1,8 +1,6 @@
-import com.sun.source.tree.IfTree;
-
 import java.util.Scanner;
 
-public class Condicional10 {
+public class Ejercicio10 {
     public static void main(String[]args){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Escribe un número: ");

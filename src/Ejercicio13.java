@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Condicional13 {
+public class Ejercicio13 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Escribe la hora: ");
