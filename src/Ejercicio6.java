@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Condicional6 {
+public class Ejercicio6 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Dime un número: ");

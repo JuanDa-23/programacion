@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Condicional4 {
+public class Ejercicio4 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Pon el primer número: ");
