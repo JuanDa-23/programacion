@@ -1,27 +1,27 @@
+import java.util.Random;
+import java.util.Scanner;
+
 public class Ejercicio28 {
     public static void main(String[] args) {
-      /*  Random random = new Random();
-        int numeroLoteria = random.nextInt(100000);  // Genera un número aleatorio entre 0 y 99,999
-
-        System.out.println("¡Bienvenido a la Lotería de Navidad!");
-        System.out.println("El número de la lotería de Navidad es: " + numeroLoteria);
-        System.out.println("Puedes ingresar hasta 5 números para verificar si has ganado.");
+        Random random = new Random();
+        int randomInt = random.nextInt(100000);
+        System.out.println(randomInt);
 
         Scanner scanner = new Scanner(System.in);
+        int numero = scanner.nextInt();
+        int intentos = 5;
+        for (int i = 1; i <= intentos; i++) {
+            System.out.print("Intento " + i + ": Ingrese un número: ");
 
-        for (int i = 1; i <= 5; i++) {
-            System.out.print("Ingresa tu número #" + i + ": ");
-            int numeroIngresado = scanner.nextInt();
-
-            if (numeroIngresado == numeroLoteria) {
-                System.out.println("¡Felicidades! Has ganado la Lotería de Navidad.");
-                break;  // Salir del bucle si se ha acertado el número
-            } else {
-                System.out.println("Lo siento, no has ganado esta vez.");
-            }
+            if (numero == randomInt) ;
+            System.out.println("¡¡¡ENORABUENA!!!");
+            System.out.println("Has ganado la loteria");
+            break;
+          /*  }else{
+                System.out.println("Otra vez será");
+            */
         }
-
-        System.out.println("Gracias por participar en la Lotería de Navidad.");
-        scanner.close();*/
+        }
     }
-}
+
+

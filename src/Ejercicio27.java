@@ -5,12 +5,8 @@ public class Ejercicio27 {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Los 20 primeros números primos son: ");
 
-
-       /* int cantidadPrimos = 20;
-        int numero = 2;  // Empezamos con el primer número primo
-
-        System.out.println("Los primeros 20 números primos son:");
-
+        int cantidadPrimos = 20;
+        int numero = 2;
         while (cantidadPrimos > 0) {
             if (esPrimo(numero)) {
                 System.out.print(numero + " ");
@@ -29,7 +25,8 @@ public class Ejercicio27 {
                 return false;
             }
         }
-        return true;*/
+        return true;
+
 
     }
 }
