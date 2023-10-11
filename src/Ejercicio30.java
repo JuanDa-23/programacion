@@ -1,26 +1,45 @@
 import java.util.Scanner;
 
 public class Ejercicio30 {
-    public static void main(String[]args){
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Introduzca un número entero");
-        int numero1 = scanner.nextInt();
-        System.out.println("Introduzca una operación (+,-,*,/ o %)");
-        switch (numero1) {
-            case 0:
-            break;
-            case 1:
-            break;
-            case 2:
-            break;
-            case 3:
-            break;
-            case 4:
-            break;
+        boolean seguir = true;
+        while (seguir) {
+            System.out.println("Introduce un número.");
+            double numero1 = scanner.nextDouble();
+            scanner.nextLine();
+            System.out.println("Introduce la operación: (+ , - , * , / , %)");
+            String operacion = scanner.nextLine();
+            System.out.println("Introduce otro número.");
+            double numero2 = scanner.nextDouble();
+            scanner.nextLine();
+            double resultado = 0;
+            switch (operacion) {
+                case "+":
+                    resultado = (numero1 + numero2);
+                    break;
+                case "-":
+                    resultado = (numero1 - numero2);
+                    break;
+                case "*":
+                    resultado = (numero1 * numero2);
+                    break;
+                case "/":
+                    resultado = (numero1 / numero2);
+                    break;
+                case "%":
+                    resultado = (numero1 % numero2);
+                    break;
+                default:
+                    System.out.println("ERROR: Operación no válida.");
+                    break;
+            }
+            System.out.println("El resultado es " + resultado);
+            System.out.println("Introduce 'n' si quieres dejar de calcular.");
+            String decision = scanner.nextLine();
+            if (decision.equals("n")) {
+                seguir = false;
+            }
         }
-        System.out.println("Introduzca el segundo número entero");
-        int numero2 = scanner.nextInt();
-
-//https://codigofacilito.com/articulos/ejemplos-switch-java//
     }
 }
