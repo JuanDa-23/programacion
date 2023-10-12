@@ -46,20 +46,39 @@ public class Proyect {
             System.out.println("Guerrero_NPC: " + npcL);
             if (pointV > npcV) {
                 System.out.println("Empiezas tu personaje");
-                System.out.println("Inflinge ");
-
-            } else {
-                System.out.println("Empieza mi Guerrero");
-                System.out.println();
+                int critico = random.nextInt(100);
+                if (critico >= 75)
+                    pointA = pointA * 2;
+            //}//
+            int damageTotal = 0;
+            double defensaTotal = 0;
+            while (pointD >= 50) {
+                damageTotal = pointA / 2;
+                defensaTotal = pointD * 0.25;
+                System.out.println("Inflinges " + (npcL - damageTotal) + " puntos de daño pero tu salud disminuye a " + (defensaTotal));
 
             }
-            /*int critico = random.nextInt(100);
-            if (critico >= 75) ;*/
-            //Se genera un numero del 1 al 100, si es mayor que 75 (damage x2)//
-            //Visualizar las rondas//
-            //defensa quita 50% al daño pero elimina 25% de defensa //
-            //Regenerarse//
+
+        }else{
+            System.out.println("Empieza mi Guerrero");
+            int critico = random.nextInt(100);
+            if (critico >= 75)
+                npcA = npcA * 2;
         }
-        //  i++;//
+        int npcDamage = 0;
+        double npcDefensa = 0;
+        while (pointD >= 50) {
+            npcDamage = npcA / 2;
+            npcDefensa = npcD * 0.25;
+            System.out.println("Inflinge " + (pointL - npcDamage) + " puntos de daño pero tu defensa disminuye a " + (npcDefensa));
+
+        }
+
+        i++;
     }
+
+    //Se genera un numero del 1 al 100, si es mayor que 75 (damage x2)//
+    //Visualizar las rondas//
+    //Regenerarse//
 }
+         }
