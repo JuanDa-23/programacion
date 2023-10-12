@@ -14,7 +14,7 @@ public class Proyect {
         int pointD = scanner.nextInt();
         System.out.print("Introduce los puntos de Vida: ");
         int pointL = scanner.nextInt();
-        if ((pointV + pointA + pointD + pointL < 500) && (pointV <= 200 || pointA <= 200 || pointD <= 200 || pointL <= 200)) {
+        if ((pointV + pointA + pointD + pointL < 501) && (pointV <= 201 || pointA <= 201 || pointD <= 201 || pointL <= 201)) {
             System.out.println("____________________________________________________________________________________________________");
         } else {
             System.out.println("Error, vuelve a introducir los puntos ");
@@ -32,14 +32,34 @@ public class Proyect {
         System.out.println("La Defensa será de: " + npcD);
         int npcL = random.nextInt(201);
         System.out.println("La Vida será de: " + npcL);
-
         int totalPoints = npcV + npcA + npcD + npcL;
-        while (totalPoints == 500) if (npcV > 0 || npcA > 0 || npcD > 0 || npcL > 0) { int reduceFrom = random.nextInt(4); int[] attrs = {npcV, npcA, npcD, npcL}; if (attrs[reduceFrom] > 0) { attrs[reduceFrom]--; totalPoints--; } npcV = attrs[0]; npcA = attrs[1]; npcD = attrs[2]; npcL = attrs[3]; }
-
-        //Delimitar el sumatorio npc hasta 500//
-        //if (pointV > npcV){//
-        //Se genera un numero del 1 al 100, si es mayor que 75 (damage x2)//
-        //Visualizar las rondas//
-        //defensa quita 50% al daño pero elimina 25% de defensa //
+        while (totalPoints == 500) {
+            if (npcV > 0 || npcA > 0 || npcD > 0 || npcL > 0) {
+            }
         }
+        //Generación de RONDAS//
+        int i = 1;
+        while (pointL != 0 || npcL != 0) {
+            System.out.println("RONDA " + i);
+
+            System.out.println("Jugador: " + pointL);
+            System.out.println("Guerrero_NPC: " + npcL);
+            if (pointV > npcV) {
+                System.out.println("Empiezas tu personaje");
+                System.out.println("Inflinge ");
+
+            } else {
+                System.out.println("Empieza mi Guerrero");
+                System.out.println();
+
+            }
+            /*int critico = random.nextInt(100);
+            if (critico >= 75) ;*/
+            //Se genera un numero del 1 al 100, si es mayor que 75 (damage x2)//
+            //Visualizar las rondas//
+            //defensa quita 50% al daño pero elimina 25% de defensa //
+            //Regenerarse//
+        }
+        //  i++;//
     }
+}
