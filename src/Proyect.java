@@ -39,42 +39,48 @@ public class Proyect {
         }
         //Generación de RONDAS//
         int i = 1;
-        while (pointL != 0 || npcL != 0) {
+        if (pointL != 0 || npcL != 0) {
             System.out.println("RONDA " + i);
-
             System.out.println("Jugador: " + pointL);
             System.out.println("Guerrero_NPC: " + npcL);
+
+
             if (pointV > npcV) {
                 System.out.println("Empiezas tu personaje");
                 int critico = random.nextInt(100);
-                if (critico >= 75)
+                if (critico >= 75) {
                     pointA = pointA * 2;
-            //}//
-            int damageTotal = 0;
-            double defensaTotal = 0;
-            while (pointD >= 50) {
+                    System.out.println("Inflinges un crítico de " + (pointA) + "puntos; mi salud disminuye a " + (npcL - pointA));
+                }else{
+                    System.out.println("Inflinges " + (pointA) + "; mi salud disminuye a " + (npcL - pointA));
+                }
+                int damageTotal = 0;
+                double defensaTotal = 0;
+                if (pointD >= 50) {
                 damageTotal = pointA / 2;
                 defensaTotal = pointD * 0.25;
-                System.out.println("Inflinges " + (npcL - damageTotal) + " puntos de daño pero tu salud disminuye a " + (defensaTotal));
+                System.out.println("Solo inflinges " + (damageTotal) + " puesto que mi defensa se ha reducido a " + (defensaTotal));
 
             }
 
-        }else{
+       /* }else{
             System.out.println("Empieza mi Guerrero");
             int critico = random.nextInt(100);
             if (critico >= 75)
                 npcA = npcA * 2;
-        }
+            System.out.println("Inflinges " + (npcA) + "; tu salud disminuye a " + (pointL - npcA));
+
+            }
         int npcDamage = 0;
         double npcDefensa = 0;
-        while (pointD >= 50) {
+        if (pointD >= 50) {
             npcDamage = npcA / 2;
             npcDefensa = npcD * 0.25;
-            System.out.println("Inflinge " + (pointL - npcDamage) + " puntos de daño pero tu defensa disminuye a " + (npcDefensa));
+            System.out.println("Inflinge " + (npcDamage) + " puntos de daño pero tu defensa disminuye a " + (npcDefensa));*/
 
         }
 
-        i++;
+       // i++;//
     }
 
     //Se genera un numero del 1 al 100, si es mayor que 75 (damage x2)//
