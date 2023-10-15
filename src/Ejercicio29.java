@@ -6,24 +6,22 @@ import java.util.Scanner;
 public class Ejercicio29 {
     public static void main(String[] args) {
         Random random = new Random();
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Adivina el número secreto entre 1 y 100 (Te iré dando pistas). ");
-
-        while (true) {
-            int randomInt = random.nextInt(100);
-            int number = scanner.nextInt();
-
-            if (number != randomInt) {
-
-            } else if (number > randomInt) {
-                System.out.println("El número secreto se es menor al introducido; vuelva a intentarlo ");
+        int secreto = random.nextInt(1, 100);
+        Scanner in = new Scanner(System.in);
+        System.out.println("Adivina el número secreto, se encuentra entre el 1 y el 100");
+        int i = in.nextInt();
+        while (secreto != i) {
+            if ((i > secreto)) {
+                System.out.println("Tu número es mayor");
             } else {
-                System.out.println("El número secreto se es mayor al introducido; vuelva a intentarlo ");
-
-                System.out.println("Correcto, el número secreto era: " + randomInt);
-                break;
+                System.out.println("Tu número es menor");
             }
+            System.out.println("Inténtalo denuevo:");
+            i = in.nextInt();
         }
+        System.out.println("¡Genial! El número secreto es " + i + ".");
     }
 }
+
+
 

@@ -2,7 +2,6 @@ import java.util.Scanner;
 
 public class Ejercicio27 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
         System.out.println("Los 20 primeros números primos son: ");
 
         int cantidadPrimos = 20;

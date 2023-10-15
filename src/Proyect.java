@@ -96,6 +96,7 @@ public class Proyect {
             //Acabar Bucle infinito//
             //No hay vida después del negativo//
             //Regenerarse//
+            //Math.abs//
         }
     }
 }
