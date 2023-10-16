@@ -107,7 +107,7 @@ public class Proyect {
                     break;
 
                 }
-                    //Falta quitar los números negativos//
+                    //Falta quitar los números negativos  //
             }
         }
     }
