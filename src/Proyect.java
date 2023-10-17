@@ -21,7 +21,7 @@ public class Proyect {
         int puntosDefensa = scanner.nextInt();
         System.out.print("Introduce los puntos de Vida: ");
         int puntosVida = scanner.nextInt();
-        if ((puntosVelocidad + puntosAtaque + puntosDefensa + puntosVida< 501) && (puntosVelocidad <= 201 && puntosVelocidad > 0 || puntosAtaque <= 201 && puntosAtaque > 0 || puntosDefensa <= 201 && puntosDefensa > 0 || puntosVida <= 201 && puntosVida > 0)) {
+        if ((puntosVelocidad + puntosAtaque + puntosDefensa + puntosVida < 501) && (puntosVelocidad <= 201 && puntosVelocidad > 0 || puntosAtaque <= 201 && puntosAtaque > 0 || puntosDefensa <= 201 && puntosDefensa > 0 || puntosVida <= 201 && puntosVida > 0)) {
             System.out.println("____________________________________________________________________________________________________");
         } else {
             System.out.println("Error, vuelve a introducir los puntos ");
@@ -55,59 +55,59 @@ public class Proyect {
             if (puntosVelocidad > velocidadNpc) {
                 System.out.println("Empieza tu personaje");
 
-                    int critico = random.nextInt(1, 100);
-                    if (critico >= 80) {
+                int critico = random.nextInt(1, 100);
+                if (critico >= 80) {
                     puntosAtaque = random.nextInt(100, 201);
                     System.out.println("Inflinges un crítico de " + (puntosAtaque) + " puntos; mi salud disminuye a " + (Math.max(vidaNpc - puntosAtaque, 0)));
-                    } else if (critico < 20) {
+                } else if (critico < 20) {
                     puntosAtaque = random.nextInt(50, 101);
                     puntosDefensa = puntosDefensa - 10;
                     System.out.println("Solo inflinges " + (puntosAtaque) + " y mi salud disminuye a " + (Math.max(vidaNpc - puntosAtaque, 0)));
-                    } else {
+                } else {
                     System.out.println("Inflinges " + (puntosAtaque) + "; mi salud disminuye a " + Math.max(vidaNpc - puntosAtaque, 0));
                     System.out.println("Mi Guerrero inflinge " + (ataqueNpc) + "; tu salud disminuye a " + Math.max(puntosVida - ataqueNpc, 0));
-                    }
-                    System.out.println(Math.max(puntosVida -= ataqueNpc, 0));
-                    System.out.println(Math.max(vidaNpc -= puntosAtaque, 0));
-                    System.out.println("____________________________________________________________________________________________________");
-
-            }
-                if (puntosVida <= 0) {
-                    System.out.println("¡¡¡HE GANADO!!!");
-                } else if (vidaNpc <= 0) {
-                    System.out.println("¡¡¡HAS GANADO!!!");
-                    System.out.println("____________________________________________________________________________________________________");
-
-
-                } else {
-                    System.out.println("Empieza mi Guerrero");
-
-                        int critico2 = random.nextInt(1, 100);
-                        if (critico2 >= 80) {
-                            ataqueNpc = random.nextInt(100, 201);
-                            System.out.println("Mi Guerrero inflinge un crítico de " + (ataqueNpc) + " puntos; tu salud disminuye a " + Math.max(puntosVida - ataqueNpc, 0));
-                        } else if (critico2 < 20) {
-                            ataqueNpc = random.nextInt(50, 101);
-                            defensaNpc = defensaNpc - 10;
-                            System.out.println("Solo inflinges " + (ataqueNpc) + " mi salud disminuye a " + (Math.max(puntosVida - ataqueNpc, 0)));
-                        } else {
-                            System.out.println("Mi Guerrero inflinge " + (ataqueNpc) + "; tu salud disminuye a " + Math.max(puntosVida - ataqueNpc, 0));
-                            System.out.println("Inflinges " + (puntosAtaque) + "; mi salud disminuye a " + (Math.max(vidaNpc - puntosAtaque, 0)));
-                        }
-                        System.out.println(Math.max(puntosVida -= ataqueNpc, 0));
-                        System.out.println(Math.max(vidaNpc -= puntosAtaque, 0));
-                        System.out.println("____________________________________________________________________________________________________");
-
-                    }
-                if (puntosVida <= 0) {
-                    System.out.println("¡¡¡HE GANADO!!!");
-                } else if (vidaNpc <= 0) {
-                    System.out.println("¡¡¡HAS GANADO!!!");
-                    System.out.println("____________________________________________________________________________________________________");
-
-
                 }
-            ++i;
+                System.out.println(Math.max(puntosVida -= ataqueNpc, 0));
+                System.out.println(Math.max(vidaNpc -= puntosAtaque, 0));
+                System.out.println("____________________________________________________________________________________________________");
+
             }
+            if (puntosVida <= 0) {
+                System.out.println("¡¡¡HE GANADO!!!");
+            } else if (vidaNpc <= 0) {
+                System.out.println("¡¡¡HAS GANADO!!!");
+                System.out.println("____________________________________________________________________________________________________");
+
+
+            } else {
+                System.out.println("Empieza mi Guerrero");
+
+                int critico2 = random.nextInt(1, 100);
+                if (critico2 >= 80) {
+                    ataqueNpc = random.nextInt(100, 201);
+                    System.out.println("Mi Guerrero inflinge un crítico de " + (ataqueNpc) + " puntos; tu salud disminuye a " + Math.max(puntosVida - ataqueNpc, 0));
+                } else if (critico2 < 20) {
+                    ataqueNpc = random.nextInt(50, 101);
+                    defensaNpc = defensaNpc - 10;
+                    System.out.println("Solo inflinges " + (ataqueNpc) + " mi salud disminuye a " + (Math.max(puntosVida - ataqueNpc, 0)));
+                } else {
+                    System.out.println("Mi Guerrero inflinge " + (ataqueNpc) + "; tu salud disminuye a " + Math.max(puntosVida - ataqueNpc, 0));
+                    System.out.println("Inflinges " + (puntosAtaque) + "; mi salud disminuye a " + (Math.max(vidaNpc - puntosAtaque, 0)));
+                }
+                System.out.println(Math.max(puntosVida -= ataqueNpc, 0));
+                System.out.println(Math.max(vidaNpc -= puntosAtaque, 0));
+                System.out.println("____________________________________________________________________________________________________");
+
+            }
+            if (puntosVida <= 0) {
+                System.out.println("¡¡¡HE GANADO!!!");
+            } else if (vidaNpc <= 0) {
+                System.out.println("¡¡¡HAS GANADO!!!");
+                System.out.println("____________________________________________________________________________________________________");
+
+
+            }
+            ++i;
         }
     }
+}
