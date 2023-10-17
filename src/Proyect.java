@@ -55,11 +55,11 @@ public class Proyect {
             if (puntosVelocidad > velocidadNpc) {
                 System.out.println("Empieza tu personaje");
 
-                    int d = random.nextInt(1, 100);
-                    if (d >= 80) {
+                    int critico = random.nextInt(1, 100);
+                    if (critico >= 80) {
                     puntosAtaque = random.nextInt(100, 201);
                     System.out.println("Inflinges un crítico de " + (puntosAtaque) + " puntos; mi salud disminuye a " + (Math.max(vidaNpc - puntosAtaque, 0)));
-                    } else if (d < 20) {
+                    } else if (critico < 20) {
                     puntosAtaque = random.nextInt(50, 101);
                     puntosDefensa = puntosDefensa - 10;
                     System.out.println("Solo inflinges " + (puntosAtaque) + " y mi salud disminuye a " + (Math.max(vidaNpc - puntosAtaque, 0)));
@@ -82,11 +82,11 @@ public class Proyect {
                 } else {
                     System.out.println("Empieza mi Guerrero");
 
-                        int d2 = random.nextInt(1, 100);
-                        if (d2 >= 80) {
+                        int critico2 = random.nextInt(1, 100);
+                        if (critico2 >= 80) {
                             ataqueNpc = random.nextInt(100, 201);
                             System.out.println("Mi Guerrero inflinge un crítico de " + (ataqueNpc) + " puntos; tu salud disminuye a " + Math.max(puntosVida - ataqueNpc, 0));
-                        } else if (d2 < 20) {
+                        } else if (critico2 < 20) {
                             ataqueNpc = random.nextInt(50, 101);
                             defensaNpc = defensaNpc - 10;
                             System.out.println("Solo inflinges " + (ataqueNpc) + " mi salud disminuye a " + (Math.max(puntosVida - ataqueNpc, 0)));
