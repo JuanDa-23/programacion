@@ -69,7 +69,9 @@ public class Proyect {
                     }
                     System.out.println(Math.max(puntosVida -= ataqueNpc, 0));
                     System.out.println(Math.max(vidaNpc -= puntosAtaque, 0));
-                }
+                    System.out.println("____________________________________________________________________________________________________");
+
+            }
                 if (puntosVida <= 0) {
                     System.out.println("¡¡¡HE GANADO!!!");
                 } else if (vidaNpc <= 0) {
@@ -94,7 +96,7 @@ public class Proyect {
                         }
                         System.out.println(Math.max(puntosVida -= ataqueNpc, 0));
                         System.out.println(Math.max(vidaNpc -= puntosAtaque, 0));
-
+                        System.out.println("____________________________________________________________________________________________________");
 
                     }
                 if (puntosVida <= 0) {
