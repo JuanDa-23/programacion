@@ -78,7 +78,7 @@ public class Proyect {
                 ++i;
 
 
-                if (npcL == 0) {
+                if (npcL <= 0) {
                     System.out.println("¡¡¡HAS GANADO!!!");
                     break;
 
@@ -107,12 +107,13 @@ public class Proyect {
                 pointL -= npcA;*/
 
 
-                if (pointL == 0) {
+                if (pointL <= 0) {
                     System.out.println("¡¡¡HE GANADO!!!");
                     break;
 
                 }
-                    //Falta quitar los números negativos  //
+
+
             }
         }
     }
