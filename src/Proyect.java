@@ -66,14 +66,18 @@ public class Proyect {
                     pointD = pointD - 25;
                     System.out.println("Solo inflinges " + (pointA) + " puesto que mi defensa se ha reducido a " + (pointD));
                 } else {
-                    System.out.println("Inflinges " + (pointA) + "; mi salud disminuye a " + (npcL - pointA));
-                    System.out.println("Mi Guerrero inflinge " + (npcA) + "; tu salud disminuye a " + (pointL - npcA));
+                    System.out.println("Inflinges " + (pointA) + "; mi salud disminuye a " + Math.max(npcL - pointA, 0));
+                    System.out.println("Mi Guerrero inflinge " + (npcA) + "; tu salud disminuye a " + Math.max(pointL - npcA, 0));
                 }
+                System.out.println(Math.max(pointL -= npcA, 0));
+                System.out.println(Math.max(npcL -= pointA, 0));
                 System.out.println("____________________________________________________________________________________________________");
 
-                pointL -= npcA;
-                npcL -= pointA;
+                /*pointL -= npcA;
+                npcL -= pointA;*/
                 ++i;
+
+
                 if (npcL == 0) {
                     System.out.println("¡¡¡HAS GANADO!!!");
                     break;
@@ -94,14 +98,15 @@ public class Proyect {
                     npcD = npcD - 25;
                     System.out.println("Solo inflinges " + (npcA) + " puesto que su defensa se ha reducido a " + (npcD));
                 } else {
-                    System.out.println("Mi Guerrero inflinge " + (npcA) + "; tu salud disminuye a " + (pointL - npcA));
-                    System.out.println("Inflinges " + (pointA) + "; mi salud disminuye a " + (npcL - pointA));
+                    System.out.println("Mi Guerrero inflinge " + (npcA) + "; tu salud disminuye a " + Math.max(pointL - npcA, 0));
+                    System.out.println("Inflinges " + (pointA) + "; mi salud disminuye a " + (Math.max(npcL - pointA, 0)));
                 }
                 System.out.println("____________________________________________________________________________________________________");
-                npcL -= pointA;
-                pointL -= npcA;
 
-                i++;
+                /*npcL -= pointA;
+                pointL -= npcA;*/
+
+
                 if (pointL == 0) {
                     System.out.println("¡¡¡HE GANADO!!!");
                     break;
