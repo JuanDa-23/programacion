@@ -14,14 +14,14 @@ public class Proyect {
 
         //Introducción Atributos Personaje//
         System.out.print("Introduce los puntos de Velocidad: ");
-        int pointV = scanner.nextInt();
+        int puntosVelocidad = scanner.nextInt();
         System.out.print("Introduce los puntos de Ataque: ");
-        int pointA = scanner.nextInt();
+        int puntosAtaque = scanner.nextInt();
         System.out.print("Introduce los puntos de Defensa: ");
-        int pointD = scanner.nextInt();
+        int puntosDefensa = scanner.nextInt();
         System.out.print("Introduce los puntos de Vida: ");
-        int pointL = scanner.nextInt();
-        if ((pointV + pointA + pointD + pointL < 501) && (pointV <= 201 && pointV > 0 || pointA <= 201 && pointA > 0 || pointD <= 201 && pointD > 0 || pointL <= 201 && pointL > 0)) {
+        int puntosVida = scanner.nextInt();
+        if ((puntosVelocidad + puntosAtaque + puntosDefensa + puntosVida< 501) && (puntosVelocidad <= 201 && puntosVelocidad > 0 || puntosAtaque <= 201 && puntosAtaque > 0 || puntosDefensa <= 201 && puntosDefensa > 0 || puntosVida <= 201 && puntosVida > 0)) {
             System.out.println("____________________________________________________________________________________________________");
         } else {
             System.out.println("Error, vuelve a introducir los puntos ");
@@ -32,51 +32,49 @@ public class Proyect {
         int randomInt = random.nextInt(50, 200);
         System.out.println("Ahora, le daré yo puntos a mi Guerrero");
 
-        int npcV = random.nextInt(50, 201);
-        System.out.println("La Velocidad será de: " + npcV);
-        int npcA = random.nextInt(50, 201);
-        System.out.println("El Ataque será de: " + npcA);
-        int npcD = random.nextInt(50, 201);
-        System.out.println("La Defensa será de: " + npcD);
-        int npcL = random.nextInt(50, 201);
-        System.out.println("La Vida será de: " + npcL);
-        int totalPoints = npcV + npcA + npcD + npcL;
+        int velocidadNpc = random.nextInt(50, 201);
+        System.out.println("La Velocidad será de: " + velocidadNpc);
+        int ataqueNpc = random.nextInt(50, 201);
+        System.out.println("El Ataque será de: " + ataqueNpc);
+        int defensaNpc = random.nextInt(50, 201);
+        System.out.println("La Defensa será de: " + defensaNpc);
+        int vidaNpc = random.nextInt(50, 201);
+        System.out.println("La Vida será de: " + vidaNpc);
+        int totalPoints = velocidadNpc + ataqueNpc + defensaNpc + vidaNpc;
         while (totalPoints == 500) {
-            if (npcV > 0 || npcA > 0 || npcD > 0 || npcL > 0) {
+            if (velocidadNpc > 0 || ataqueNpc > 0 || defensaNpc > 0 || vidaNpc > 0) {
             }
         }
 
         //Generación de RONDAS//
         int i = 1;
-        while (pointL > 0 && npcL > 0) {
+        while (puntosVida > 0 && vidaNpc > 0) {
             System.out.println("____________________________________________________________________________________________________");
             System.out.println("RONDA " + i);
 
-            if (pointV > npcV) {
+            if (puntosVelocidad > velocidadNpc) {
                 System.out.println("Empieza tu personaje");
 
                     int d = random.nextInt(1, 100);
                     if (d >= 80) {
-                    pointA = random.nextInt(100, 201);
-                    System.out.println("Inflinges un crítico de " + (pointA) + " puntos; mi salud disminuye a " + (Math.max(npcL - pointA, 0)));
+                    puntosAtaque = random.nextInt(100, 201);
+                    System.out.println("Inflinges un crítico de " + (puntosAtaque) + " puntos; mi salud disminuye a " + (Math.max(vidaNpc - puntosAtaque, 0)));
                     } else if (d < 20) {
-                    pointA = random.nextInt(50, 101);
-                    pointD = pointD - 10;
-                    System.out.println("Solo inflinges " + (pointA) + " y mi salud disminuye a " + (Math.max(npcL - pointA, 0)));
+                    puntosAtaque = random.nextInt(50, 101);
+                    puntosDefensa = puntosDefensa - 10;
+                    System.out.println("Solo inflinges " + (puntosAtaque) + " y mi salud disminuye a " + (Math.max(vidaNpc - puntosAtaque, 0)));
                     } else {
-                    System.out.println("Inflinges " + (pointA) + "; mi salud disminuye a " + Math.max(npcL - pointA, 0));
-                    System.out.println("Mi Guerrero inflinge " + (npcA) + "; tu salud disminuye a " + Math.max(pointL - npcA, 0));
+                    System.out.println("Inflinges " + (puntosAtaque) + "; mi salud disminuye a " + Math.max(vidaNpc - puntosAtaque, 0));
+                    System.out.println("Mi Guerrero inflinge " + (ataqueNpc) + "; tu salud disminuye a " + Math.max(puntosVida - ataqueNpc, 0));
                     }
-                    System.out.println(Math.max(pointL -= npcA, 0));
-                    System.out.println(Math.max(npcL -= pointA, 0));
+                    System.out.println(Math.max(puntosVida -= ataqueNpc, 0));
+                    System.out.println(Math.max(vidaNpc -= puntosAtaque, 0));
                 }
-                if (pointL <= 0) {
+                if (puntosVida <= 0) {
                     System.out.println("¡¡¡HE GANADO!!!");
-                } else if (npcL <= 0) {
+                } else if (vidaNpc <= 0) {
                     System.out.println("¡¡¡HAS GANADO!!!");
                     System.out.println("____________________________________________________________________________________________________");
-
-                    ++i;
 
 
                 } else {
@@ -84,33 +82,30 @@ public class Proyect {
 
                         int d2 = random.nextInt(1, 100);
                         if (d2 >= 80) {
-                            npcA = random.nextInt(100, 201);
-                            System.out.println("Mi Guerrero inflinge un crítico de " + (npcA) + " puntos; tu salud disminuye a " + Math.max(pointL - npcA, 0));
+                            ataqueNpc = random.nextInt(100, 201);
+                            System.out.println("Mi Guerrero inflinge un crítico de " + (ataqueNpc) + " puntos; tu salud disminuye a " + Math.max(puntosVida - ataqueNpc, 0));
                         } else if (d2 < 20) {
-                            npcA = random.nextInt(50, 101);
-                            npcD = npcD - 10;
-                            System.out.println("Solo inflinges " + (npcA) + " mi salud disminuye a " + (Math.max(pointL - npcA, 0)));
+                            ataqueNpc = random.nextInt(50, 101);
+                            defensaNpc = defensaNpc - 10;
+                            System.out.println("Solo inflinges " + (ataqueNpc) + " mi salud disminuye a " + (Math.max(puntosVida - ataqueNpc, 0)));
                         } else {
-                            System.out.println("Mi Guerrero inflinge " + (npcA) + "; tu salud disminuye a " + Math.max(pointL - npcA, 0));
-                            System.out.println("Inflinges " + (pointA) + "; mi salud disminuye a " + (Math.max(npcL - pointA, 0)));
+                            System.out.println("Mi Guerrero inflinge " + (ataqueNpc) + "; tu salud disminuye a " + Math.max(puntosVida - ataqueNpc, 0));
+                            System.out.println("Inflinges " + (puntosAtaque) + "; mi salud disminuye a " + (Math.max(vidaNpc - puntosAtaque, 0)));
                         }
-                        System.out.println(Math.max(pointL -= npcA, 0));
-                        System.out.println(Math.max(npcL -= pointA, 0));
+                        System.out.println(Math.max(puntosVida -= ataqueNpc, 0));
+                        System.out.println(Math.max(vidaNpc -= puntosAtaque, 0));
+
 
                     }
-                if (pointL <= 0) {
+                if (puntosVida <= 0) {
                     System.out.println("¡¡¡HE GANADO!!!");
-                } else if (npcL <= 0) {
+                } else if (vidaNpc <= 0) {
                     System.out.println("¡¡¡HAS GANADO!!!");
                     System.out.println("____________________________________________________________________________________________________");
 
-                    ++i;
 
                 }
+            ++i;
             }
         }
     }
-
-
-
-
