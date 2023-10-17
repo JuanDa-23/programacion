@@ -43,7 +43,7 @@ public class Prueba {
         //Generación de RONDAS//
         for (int i = 1; (pointL >= 0 || npcL >= 0); i++) {
             System.out.println("____________________________________________________________________________________________________");
-            System.out.println("RONDA " + i);
+           // System.out.println(ronda = 0 + "RONDA " + ronda++);//
 
             if (pointV > npcV) {
                 System.out.println("Empieza tu personaje");
