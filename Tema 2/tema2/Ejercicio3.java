@@ -10,16 +10,19 @@ public class Ejercicio3 {
         System.out.println("El perímetro es: " + calculateCirclePerimeter(radius));
         System.out.println("El area es: " + calculateCircleArea(radius));
     }
-//Esto no sé que hace y como invalidar negativos//
-    public static boolean validRadius (int radius) {
+
+    //Esto no sé que hace y como invalidar negativos//
+    public static boolean validRadius(int radius) {
         return radius >= 0;
     }
-    public static double calculateCirclePerimeter (int radius) {
+
+    public static double calculateCirclePerimeter(int radius) {
         int result = radius;
         return 2 * Math.PI * radius;
     }
-    public static double calculateCircleArea (int radius) {
-       int result = radius;
+
+    public static double calculateCircleArea(int radius) {
+        int result = radius;
         return Math.PI * Math.pow(radius, 2);
     }
 }
