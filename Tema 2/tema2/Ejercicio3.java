@@ -7,11 +7,14 @@ public class Ejercicio3 {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Te diré el perímetro y el area.\n" + "Introduce el radio de un circulo: ");
         int radius = scanner.nextInt();
-        System.out.println("El perímetro es: " + calculateCirclePerimeter(radius));
-        System.out.println("El area es: " + calculateCircleArea(radius));
+        if (radius < 0) {
+            System.out.println("El número es erroneo");
+        } else {
+            System.out.println("El perímetro es: " + calculateCirclePerimeter(radius));
+            System.out.println("El area es: " + calculateCircleArea(radius));
+        }
     }
 
-    //Esto no sé que hace y como invalidar negativos//
     public static boolean validRadius(int radius) {
         return radius >= 0;
     }
