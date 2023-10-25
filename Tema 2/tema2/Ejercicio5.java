@@ -14,7 +14,7 @@ public class Ejercicio5 {
         int result = 1;
         for (int i = 0; i <= 10; i++) {
             result = i * number;
-            System.out.println(result);
+            System.out.println(i + " x " + number + " = " + result);
         }
 
         return result;
