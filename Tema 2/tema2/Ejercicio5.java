@@ -7,6 +7,11 @@ public class Ejercicio5 {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Introduce un número y te mostraré sus multiplicaciones: ");
         int number = scanner.nextInt();
+        if (number > 10 || number < 0) {
+            System.out.println("El número no se encuentra entre el 1 y el 10");
+        }else{
+
+        }
         System.out.println(multiplyNumber(number));
     }
 
@@ -16,8 +21,7 @@ public class Ejercicio5 {
             result = i * number;
             System.out.println(i + " x " + number + " = " + result);
         }
-
         return result;
     }
-}
 
+}
