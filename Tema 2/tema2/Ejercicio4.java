@@ -15,14 +15,10 @@ public class Ejercicio4 {
             System.out.println("Tus euros son: " + euro2Dolar(money) + " dolares");
         }
     }
-
-    public static double euro2Dolar(double money) {
-        double result = money;
-        return 1.0662 * money;
+    public static double euro2Dolar(double euros) {
+      return 1.0662 * euros;
     }
-
-    public static double dolar2Euro(double money) {
-        double result = money;
-        return 0.9319 * money;
+    public static double dolar2Euro(double dollar) {
+        return 0.9319 * dollar;
     }
 }

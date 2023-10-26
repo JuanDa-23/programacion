@@ -7,7 +7,7 @@ public class Ejercicio3 {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Te diré el perímetro y el area.\n" + "Introduce el radio de un circulo: ");
         int radius = scanner.nextInt();
-        if (radius < 0) {
+        if (validRadius(radius)) {
             System.out.println("El número es erroneo");
         } else {
             System.out.println("El perímetro es: " + calculateCirclePerimeter(radius));

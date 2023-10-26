@@ -12,17 +12,12 @@ public class Ejercicio5 {
         if (number > 10 || number < 0) {
             System.out.println("El número no se encuentra entre el 1 y el 10");
         } else {
-            System.out.println(multiplyNumber(number));
+            System.out.println(showMultiplication(number));
         }
 
-        if (number > 10 || number < 0) {
-            System.out.println("El número no se encuentra entre el 1 y el 10");
-        }else{
-            System.out.println(multiplyNumber(number));
-        }
     }
 
-    public static int multiplyNumber(int number) {
+    public static int showMultiplication(int number) {
         int result = 1;
         for (int i = 0; i <= 10; i++) {
             result = i * number;

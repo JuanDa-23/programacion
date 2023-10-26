@@ -9,7 +9,7 @@ public class Ejercicio9 {
     }
 
     public static void showTriangle(char character, int numberLine) {
-        for (int i = 1; i <= numberLine; i++) {
+       /* for (int i = 1; i <= numberLine; i++) {
             for (int j = 1; j <= numberLine - i; j++) {
                 System.out.print(" ");
             }
@@ -17,7 +17,7 @@ public class Ejercicio9 {
                 System.out.print(character);
             }
             System.out.println();
-        }
+        }*/
     }
 }
 
