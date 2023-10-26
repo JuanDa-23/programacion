@@ -4,40 +4,52 @@ import java.util.Scanner;
 
 public class Ejercicio10 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner in = new Scanner(System.in);
         System.out.println("~MENÚ~");
         System.out.println("Introduce el número del ejercicio que desee:");
-        int exercicie = scanner.nextInt();
+        int exercicie;
         do {
-            switch (exercice) {
+            showMenu();
+            exercicie = in.nextInt();
+
+            switch (exercicie) {
                 case 1:
                     Ejercicio1.main(args);
+                    break;
                 case 2:
                     Ejercicio2.main(args);
+                    break;
                 case 3:
                     Ejercicio3.main(args);
+                    break;
                 case 4:
                     Ejercicio4.main(args);
+                    break;
                 case 5:
                     Ejercicio5.main(args);
+                    break;
                 case 6:
                     Ejercicio6.main(args);
+                    break;
                 case 7:
                     Ejercicio7.main(args);
+                    break;
                 case 8:
                     Ejercicio8.main(args);
+                    break;
                 case 9:
                     Ejercicio9.main(args);
+                    break;
+                default: System.out.println("Has salido");
             }
         }
-        while (exercicie != 0);
-        {
+        while (exercicie != 0); {
         }
-        System.out.println(showMenu(exercicie));
+
     }
 
-    public static void ShowMenu(int exercice) {
-        System.out.println("0) SALIR" +
+    public static void showMenu() {
+        System.out.println("0) SALIR.\n" +
                 "1) Muestra el signo de un número introducido por el usuario.\n" +
                 "2) Indica si el usuario es mayor de edad o no.\n" +
                 "3) Calcula el área y perímetro de un círculo.\n" +
@@ -48,6 +60,8 @@ public class Ejercicio10 {
                 "8) Comprobador de fechas.\n" +
                 "9) Dibujar triángulos.");
 
+
     }
+
 }
 
