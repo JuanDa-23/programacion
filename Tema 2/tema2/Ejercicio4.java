@@ -15,6 +15,7 @@ public class Ejercicio4 {
             System.out.println("Tus euros son: " + euro2Dolar(money) + " dolares");
         }
     }
+
     public static double euro2Dolar(double money) {
         double result = money;
         return 1.0662 * money;
