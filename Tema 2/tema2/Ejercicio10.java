@@ -40,10 +40,12 @@ public class Ejercicio10 {
                 case 9:
                     Ejercicio9.main(args);
                     break;
-                default: System.out.println("Has salido");
+                default:
+                    System.out.println("Has salido");
             }
         }
-        while (exercicie != 0); {
+        while (exercicie != 0);
+        {
         }
 
     }
