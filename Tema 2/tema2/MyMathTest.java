@@ -1,6 +1,6 @@
 package tema2;
 
-/*import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -129,4 +129,4 @@ class MyMathTest {
         assertEquals(6, MyMath.figuresSumatory(-123), "-123 -> Todos los dígitos suman 6");
     }
 
-}*/
+}
