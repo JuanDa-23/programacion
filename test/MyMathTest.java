@@ -41,7 +41,7 @@ class MyMathTest {
         assertEquals( 102.01, MyMath.rectangleArea(10.1, 10.1), 0.000000001, "Precisión insuficiente");
     }
 
-    /*@Test
+    @Test
     void circlePerimeterTest() {
         assertEquals( 62.83, MyMath.circlePerimeter(10), 0.1);
         assertEquals( 0, MyMath.circlePerimeter(0), 0.1);
@@ -56,6 +56,7 @@ class MyMathTest {
         assertEquals( 0, MyMath.circleArea(-1), 0.1, "Un radio negativo devuelve área 0");
         assertEquals( 314.159265359, MyMath.circleArea(10), 0.000000001, "Precisión insuficiente");
     }
+    /*
     @Test
     void primeTest() {
         assertFalse(MyMath.isPrime(10), "10 no es primo");

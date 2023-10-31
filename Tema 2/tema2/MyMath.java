@@ -29,7 +29,16 @@ public class MyMath {
             return side * high;
         }
     }
-    /*public static double circlePerimeter(double radius) {
-*/
-
+    public static double circlePerimeter(double radius) {
+        if (radius < 0) {
+            return 0;
+        }
+        return 2 * Math.PI * radius;
+    }
+    public static double circleArea(double radius) {
+        if (radius < 0) {
+            return 0;
+        }
+        return Math.PI * radius * radius;
+    }
 }
