@@ -1,4 +1,4 @@
-package tema2;
+package Tema2;
 
 import org.junit.jupiter.api.Test;
 
