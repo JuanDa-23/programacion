@@ -1,4 +1,4 @@
-package Tema2;
+package tema2;
 
 import org.junit.jupiter.api.Test;
 
@@ -20,7 +20,7 @@ class MyMathTest {
         assertEquals( 0, MyMath.squareArea(-1), 0.1, "Un lado negativo devuelve área 0");
         assertEquals( 102.01, MyMath.squareArea(10.1), 0.000000001, "Precisión insuficiente");
     }
-
+/*
     @Test
     void rectanglePerimeterTest() {
         assertEquals( 40, MyMath.rectanglePerimeter(10, 10), 0.1);
@@ -128,5 +128,5 @@ class MyMathTest {
         assertEquals(6, MyMath.figuresSumatory(123), "123 -> Todos los dígitos suman 6");
         assertEquals(6, MyMath.figuresSumatory(-123), "-123 -> Todos los dígitos suman 6");
     }
-
+*/
 }

@@ -43,6 +43,7 @@ public class Proyect {
         int totalPoints = velocidadNpc + ataqueNpc + defensaNpc + vidaNpc;
         while (totalPoints == 500) {
             if (velocidadNpc > 0 || ataqueNpc > 0 || defensaNpc > 0 || vidaNpc > 0) {
+
             }
         }
 
