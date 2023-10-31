@@ -40,7 +40,7 @@ class MyMathTest {
         assertEquals( 0, MyMath.rectangleArea(10, -10), 0.1, "Un lado negativo devuelve área 0");
         assertEquals( 102.01, MyMath.rectangleArea(10.1, 10.1), 0.000000001, "Precisión insuficiente");
     }
-    /*
+
     @Test
     void circlePerimeterTest() {
         assertEquals( 62.83, MyMath.circlePerimeter(10), 0.1);
@@ -48,6 +48,7 @@ class MyMathTest {
         assertEquals( 0, MyMath.circlePerimeter(-1), 0.1, "Un radio negativo devuelve perímetro 0");
         assertEquals( 62.8318530718, MyMath.circlePerimeter(10), 0.000000001, "Precisión insuficiente");
     }
+    /*
     @Test
     void circleAreaTest() {
         assertEquals( 314.16, MyMath.circleArea(10), 0.1);
