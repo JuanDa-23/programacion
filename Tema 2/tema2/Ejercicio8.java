@@ -30,7 +30,6 @@ public class Ejercicio8 {
             esValido = (day <= 30);
         } else {
             esValido = (day <= 31);
-
         }
 
         return esValido;
