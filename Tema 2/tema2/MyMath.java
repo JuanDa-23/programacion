@@ -22,6 +22,7 @@ public class MyMath {
             return 2 * side + 2 * high;
         }
     }
+
     public static double rectangleArea(double side, double high) {
         if (side <= 0 || high <= 0) {
             return 0;
@@ -29,16 +30,33 @@ public class MyMath {
             return side * high;
         }
     }
+
     public static double circlePerimeter(double radius) {
         if (radius < 0) {
             return 0;
         }
         return 2 * Math.PI * radius;
     }
+
     public static double circleArea(double radius) {
         if (radius < 0) {
             return 0;
         }
         return Math.PI * radius * radius;
     }
+
+    /*public static double prime(double number) {
+        if (number < 0) {
+            return 0;
+            for (int i = 2; i <= Math.sqrt(number); i++) {
+                if (number % i == 0) {
+                    return number;
+                }
+            }
+
+        }
+    }*/
+
+
+
 }
