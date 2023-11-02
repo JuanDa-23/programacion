@@ -119,14 +119,29 @@ public class MyMath {
     }
 
     public static int factorial(int number) {
-        int factorial = 1;
-        if (number <= 0) {
-            return 1;
+        int factor = 1;
+        if (number == -1) {
+            return 0;
         } else {
             for (int i = 1; i <= number; i++) {
-                factorial = factorial * i;
+                factor = factor * i;
             }
         }
-        return number;
+        return factor;
+    }
+    public static int factorialRecursive(int number) {
+        int factor = 1;
+        if (number == -1) {
+            return 0;
+        } else {
+            for (int i = 1; i <= number; i++) {
+                factor = factor * i;
+            }
+        }
+        return factor;
+    }
+
+    public static double quadraticEcuationSolutions(double number) {
+
     }
 }
