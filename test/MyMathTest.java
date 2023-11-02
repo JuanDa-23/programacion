@@ -99,7 +99,7 @@ class MyMathTest {
         assertEquals(0, MyMath.oddFigureCount(0), "0 tiene 0 dígitos impares");
         assertEquals(1, MyMath.oddFigureCount(-100), "-100 tiene 1 dígitos impar");
     }
-/*
+
     @Test
     void factorialTest() {
         assertEquals(2, MyMath.factorial(2), "2! = 1");
@@ -108,7 +108,7 @@ class MyMathTest {
         assertEquals(3628800, MyMath.factorial(10), "10! = 3628800");
         assertEquals(0, MyMath.factorial(-1), "-1! = 0, vamos a suponer que el factorial de un número negativo es 0");
     }
-    @Test
+/*    @Test
     void factorialRecursiveTest() {
         assertEquals(2, MyMath.factorialRecursive(2), "2! = 1");
         assertEquals(1, MyMath.factorialRecursive(0), "0! = 1");
