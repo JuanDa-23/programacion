@@ -129,6 +129,7 @@ public class MyMath {
         }
         return factor;
     }
+
     public static int factorialRecursive(int number) {
         int factor = 1;
         if (number == -1) {
@@ -141,7 +142,26 @@ public class MyMath {
         return factor;
     }
 
-    public static double quadraticEcuationSolutions(double number) {
+    public static int quadraticEcuationSolutions(int number, int number1, int number2) {
+        int solution = number1 * 2 - 4 * number * number2;
+        if (solution == 0) {
+            return 1;
+        } else if (solution > 0) {
+            return 2;
+        } else {
+            return 0;
+        }
 
     }
+
+    public static int figuresSumatory(int number) {
+        int sumatory = 0;
+        number = Math.abs(number);
+        while (number != 0) {
+            sumatory += number % 10;
+            number /= 10;
+        }
+        return sumatory;
+    }
+
 }
