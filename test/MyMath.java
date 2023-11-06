@@ -164,4 +164,8 @@ public class MyMath {
         return sumatory;
     }
 
+
+    public static void squarePerimeter() {
+
+    }
 }
