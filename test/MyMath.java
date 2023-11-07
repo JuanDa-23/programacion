@@ -98,24 +98,24 @@ public class MyMath {
         return contador;
     }
 
-    public static int evenFigureCount(int number) {
+    public static int evenFigureCount(int digit) {
 
         int figures = 0;
-        if (number == 0) {
+        if (digit == 0) {
             figures = 1;
         } else {
-            while (number != 0) {
-                if (number % 2 == 0) {
+            while (digit != 0) {
+                if (digit % 2 == 0) {
                     figures++;
                 }
-                number = number / 10;
+                digit = digit / 10;
             }
         }
         return figures;
     }
 
-    public static int oddFigureCount(int number) {
-        return (figureCount(number) - evenFigureCount(number));
+    public static int oddFigureCount(int digit) {
+        return (figureCount(digit) - evenFigureCount(digit));
     }
 
     public static int factorial(int number) {
