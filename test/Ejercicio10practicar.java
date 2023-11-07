@@ -1,8 +1,5 @@
-import java.util.Scanner;
-
-/*public class EjercicioDiez {
-
-    public static void main(String[] args) {
+public class Ejercicio10practicar {
+  /*  public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("~MENÚ~");
         System.out.println("Elige con un número una función matemática.");
@@ -110,3 +107,5 @@ import java.util.Scanner;
     }
 }*/
 
+
+}
