@@ -2,10 +2,13 @@ import java.util.Scanner;
 
 public class MyMath {
     public static double squarePerimeter(double side) {
+        double result = 0;
         if (side < 0) {
-            return 0;
+            result = 0;
+        }else {
+            result = 4 * side;
         }
-        return 4 * side;
+        return result;
     }
 
     public static double squareArea(double side) {
@@ -19,33 +22,44 @@ public class MyMath {
     }
 
     public static double rectanglePerimeter(double side, double high) {
+        double result = 0;
         if (side <= 0 || high <= 0) {
-            return 0;
+            result = 0;
         } else {
-            return 2 * side + 2 * high;
+            result = 2 * side + 2 * high;
         }
+        return result;
     }
 
     public static double rectangleArea(double side, double high) {
+        double result = 0;
         if (side <= 0 || high <= 0) {
-            return 0;
+            result = 0;
         } else {
-            return side * high;
+            result = side * high;
         }
+        return  result;
     }
 
     public static double circlePerimeter(double radius) {
+        double result = 0;
         if (radius < 0) {
-            return 0;
+            result = 0;
+        }else {
+            result = 2 * Math.PI * radius;
         }
-        return 2 * Math.PI * radius;
+        return result;
     }
 
+
     public static double circleArea(double radius) {
+        double result = 0;
         if (radius < 0) {
-            return 0;
+            result = 0;
+        }else {
+        result = Math.PI * radius * radius;
         }
-        return Math.PI * radius * radius;
+        return result;
     }
 
     public static boolean isPrime(int number) {
@@ -64,20 +78,10 @@ public class MyMath {
 
     public static boolean isNotPrime(int number) {
         return !isPrime(number);
-
-        if (number < 2) return true;
-        if (number == 2 || number == 3) return false;
-        if (number % 2 == 0 || number % 3 == 0) return true;
-
-        int sqrt = (int) Math.sqrt(number) + 1;
-        for (int i = 5; i <= sqrt; i += 6) {
-            if (number % i == 0 || number % (i + 2) == 0)
-                return true;.
-        }
-        return false;
     }
 
     public static int figureCount(int digit) {
+        int result = 0;
         digit = Math.abs(digit);
 
         if (digit == 0) {
@@ -111,17 +115,7 @@ public class MyMath {
     }
 
     public static int oddFigureCount(int number) {
-        // return totaldigitos - pares
-        int figures = 0;
-        number = Math.abs(number);
-        while (number != 0) {
-            if (number % 2 == 1) {
-                figures++;
-            }
-            number = number / 10;
-        }
-        return figures;
-
+        return (figureCount(number) - evenFigureCount(number));
     }
 
     public static int factorial(int number) {

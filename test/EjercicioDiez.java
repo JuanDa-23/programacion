@@ -7,7 +7,6 @@ public class EjercicioDiez {
         System.out.println("~MENÚ~");
         System.out.println("Elige con un número una función matemática.");
         showMenu();
-        int exercicie;
         double side = scanner.nextDouble();
         double high = scanner.nextDouble();
         double radius = scanner.nextDouble();
@@ -16,77 +15,67 @@ public class EjercicioDiez {
         int number2 = scanner.nextInt();
         int digit = scanner.nextInt();
 
-        do {
+        System.out.println("El perimetro de un cuadrado de lado 3 es " + MyMath.squarePerimeter(3));
 
-            exercicie = scanner.nextInt();
-
-            switch (exercicie) {
-                case 1:
-                    System.out.println("El perimetro de un cuadrado de lado 3 es " + MyMath.squarePerimeter(3));
-                    System.out.println();
-                    break;
-                case 2:
                     System.out.println("Calcular el area del cuadrardo.");
                     MyMath.squareArea(side);
-                    break;
-                case 3:
+
+
                     System.out.println("Calcular el perímetro del rectángulo.");
                     MyMath.rectanglePerimeter(side, high);
-                    break;
-                case 4:
+
+
                     System.out.println("Calcular el area del rectángulo.");
                     MyMath.rectangleArea(side, high);
-                    break;
-                case 5:
+
+
                     System.out.println("Calcular el perímetro del círculo.");
                     MyMath.circlePerimeter(radius);
-                    break;
-                case 6:
+
+
                     System.out.println("Calcular el area del círculo.");
                     MyMath.circleArea(radius);
-                    break;
-                case 7:
+
+
                     System.out.println("¿Es tu número primo?");
                     MyMath.isPrime(number);
-                    break;
-                case 8:
+
+
                     System.out.println("¿No es tu número primo?");
                     MyMath.isNotPrime(number);
-                    break;
-                case 9:
+
+
                     System.out.println("Devuelve el número de dígitos enteros.");
                     System.out.println(MyMath.figureCount(digit));
-                    break;
-                case 10:
+
+
                     System.out.println("Devuelve el número de dígitos pares.");
                     MyMath.evenFigureCount(number);
-                    break;
-                case 11:
+
+
                     System.out.println("Devuelve el número de dígitos impares.");
-                    MyMath.oddFigtestureCount(number);
-                    break;
-                case 12:
+                   // MyMath.oddFigtestureCount(number);
+
+
                     System.out.println("Calcúlar el factorial de un número.");
                     MyMath.factorial(number);
-                    break;
-                case 13:
+
+
                     System.out.println("Devuelve el número factorial");
                     MyMath.factorialRecursive(number);
-                    break;
-                case 14:
+
+
                     System.out.println("Calcula ecuaciones de segundo grado.");
                     MyMath.quadraticEcuationSolutions(number, number1, number2);
-                    break;
-                case 15:
+
+
                     System.out.println("Suma los dígitos de números enteros.");
                     MyMath.figuresSumatory(number);
-                    break;
-                default:
+
+
                     System.out.println("Has salido");
             }
-        } while (exercicie != 0);
 
-    }
 
     public static void showMenu() {
         System.out.println(

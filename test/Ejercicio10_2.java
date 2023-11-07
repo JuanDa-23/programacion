@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class EjercicioDiez {
+/*public class EjercicioDiez {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -108,5 +108,5 @@ public class EjercicioDiez {
                         "0) SALIR .");
 
     }
-}
+}*/
 
