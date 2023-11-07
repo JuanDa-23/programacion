@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class MyMath {
     public static double squarePerimeter(double side) {
         if (side < 0) {
@@ -7,10 +9,13 @@ public class MyMath {
     }
 
     public static double squareArea(double side) {
+        double result = 0;
         if (side < 0) {
-            return 0;
+            result =  0;
+        } else {
+            result = side * side;
         }
-        return side * side;
+        return result;
     }
 
     public static double rectanglePerimeter(double side, double high) {
@@ -58,6 +63,7 @@ public class MyMath {
     }
 
     public static boolean isNotPrime(int number) {
+        return !isPrime(number);
 
         if (number < 2) return true;
         if (number == 2 || number == 3) return false;
@@ -66,7 +72,7 @@ public class MyMath {
         int sqrt = (int) Math.sqrt(number) + 1;
         for (int i = 5; i <= sqrt; i += 6) {
             if (number % i == 0 || number % (i + 2) == 0)
-                return true;
+                return true;.
         }
         return false;
     }
@@ -105,7 +111,7 @@ public class MyMath {
     }
 
     public static int oddFigureCount(int number) {
-
+        // return totaldigitos - pares
         int figures = 0;
         number = Math.abs(number);
         while (number != 0) {
@@ -165,7 +171,4 @@ public class MyMath {
     }
 
 
-    public static void squarePerimeter() {
-
-    }
 }
