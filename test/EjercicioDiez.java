@@ -1,100 +1,22 @@
-import java.util.Scanner;
-
 public class EjercicioDiez {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("~MENÚ~");
-        System.out.println("Elige con un número una función matemática.");
-        showMenu();
-        double side = scanner.nextDouble();
-        double high = scanner.nextDouble();
-        double radius = scanner.nextDouble();
-        int number = scanner.nextInt();
-        int number1 = scanner.nextInt();
-        int number2 = scanner.nextInt();
-        int digit = scanner.nextInt();
 
         System.out.println("El perimetro de un cuadrado de lado 3 es " + MyMath.squarePerimeter(3));
-
-                    System.out.println("Calcular el area del cuadrardo.");
-                    MyMath.squareArea(side);
-
-
-                    System.out.println("Calcular el perímetro del rectángulo.");
-                    MyMath.rectanglePerimeter(side, high);
-
-
-                    System.out.println("Calcular el area del rectángulo.");
-                    MyMath.rectangleArea(side, high);
-
-
-                    System.out.println("Calcular el perímetro del círculo.");
-                    MyMath.circlePerimeter(radius);
-
-
-                    System.out.println("Calcular el area del círculo.");
-                    MyMath.circleArea(radius);
-
-
-                    System.out.println("¿Es tu número primo?");
-                    MyMath.isPrime(number);
-
-
-                    System.out.println("¿No es tu número primo?");
-                    MyMath.isNotPrime(number);
-
-
-                    System.out.println("Devuelve el número de dígitos enteros.");
-                    System.out.println(MyMath.figureCount(digit));
-
-
-                    System.out.println("Devuelve el número de dígitos pares.");
-                    MyMath.evenFigureCount(number);
-
-
-                    System.out.println("Devuelve el número de dígitos impares.");
-                   // MyMath.oddFigtestureCount(number);
-
-
-                    System.out.println("Calcúlar el factorial de un número.");
-                    MyMath.factorial(number);
-
-
-                    System.out.println("Devuelve el número factorial");
-                    MyMath.factorialRecursive(number);
-
-
-                    System.out.println("Calcula ecuaciones de segundo grado.");
-                    MyMath.quadraticEcuationSolutions(number, number1, number2);
-
-
-                    System.out.println("Suma los dígitos de números enteros.");
-                    MyMath.figuresSumatory(number);
-
-
-                    System.out.println("Has salido");
-            }
-
-
-    public static void showMenu() {
-        System.out.println(
-                "1) Calcular el perímetro del cuadrardo.\n" +
-                        "2) Calcular el area del cuadrardo.\n" +
-                        "3) Calcular el perímetro del rectángulo.\n" +
-                        "4) Calcular el area del rectángulo.\n" +
-                        "5) Calcular el perímetro del círculo.\n" +
-                        "6) Calcular el area del círculo.\n" +
-                        "7) ¿Es tu número primo?\n" +
-                        "8) ¿No es tu número primo?\n" +
-                        "9) Devuelve el número de dígitos enteros.\n" +
-                        "10) Devuelve el número de dígitos pares.\n" +
-                        "11) Devuelve el número de dígitos impares.\n" +
-                        "12) Calcúlar el factorial de un número.\n" +
-                        "13) Devuelve el número factorial.\n" +
-                        "14) Calcula ecuaciones de segundo grado.\n" +
-                        "15) Suma los dígitos de números enteros.\n" +
-                        "0) SALIR .");
+        System.out.println("El area de un cuadrado de lado 5,5 es " + MyMath.squareArea(5.5));
+        System.out.println("El perímetro de un rectángulo de base 2 y altura 7 es " + MyMath.rectanglePerimeter(2, 7));
+        System.out.println("El area de un rectángulo de base 6,2 y altura 2,3 es " + MyMath.rectangleArea(6.2, 2.3));
+        System.out.println("El perímetro de un círculo de radio 9 es " + MyMath.circlePerimeter(9));
+        System.out.println("El area de un círculo de radio 1,5 es " + MyMath.circleArea(1.5));
+        System.out.println("¿El número 27543 es primo? " + MyMath.isPrime(27543));
+        System.out.println("¿No es el numero 24 primo? " + MyMath.isNotPrime(24));
+        System.out.println("Devuelveme los dígitos de 123 son " + MyMath.figureCount(123));
+        System.out.println("Ahora los dígitos pares de 4561 son" + MyMath.evenFigureCount(4561));
+        System.out.println("Y por último los dígitos impares del número 7233 son " + MyMath.oddFigureCount(7233));
+        System.out.println("El factorial de 5 es " + MyMath.factorial(5));
+        System.out.println("El factorial de 3 es " + MyMath.factorialRecursive(3));
+        System.out.println("Cuantas soluciones da la ecuación de segundo grado de 2, 5 y 10: " + MyMath.quadraticEcuationSolutions(2, 5, 10));
+        System.out.println("No sé que hace esto pero introduciré un 15. La respuesta es: " + MyMath.figuresSumatory(15));
 
     }
 }
