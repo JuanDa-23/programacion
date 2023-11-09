@@ -53,8 +53,82 @@ public class Utils {
         }
         return monedas;
     }
-    public static double getFIF(double letter) {
+    public static double getNIF(int numberDni) {
+        int numberLetter = numberDni % 23;
+        char letterNif = 'T';
+        switch (numberLetter){
+            case (1):
+               letterNif = 'R';
+               break;
+            case (2):
+                letterNif = 'W';
+                break;
+            case (3):
+                letterNif = 'A';
+                break;
+            case (4):
+                letterNif = 'G';
+                break;
+            case (5):
+                letterNif = 'M';
+                break;
+            case (6):
+                letterNif = 'Y';
+                break;
+            case (7):
+                letterNif = 'F';
+                break;
+            case (8):
+                letterNif = 'P';
+                break;
+            case (9):
+                letterNif = 'D';
+                break;
+            case (10):
+                letterNif = 'X';
+                break;
+            case (11):
+                letterNif = 'B';
+                break;
+            case (12):
+                letterNif = 'N';
+                break;
+            case (13):
+                letterNif = 'J';
+                break;
+            case (14):
+                letterNif = 'Z';
+                break;
+            case (15):
+                letterNif = 'S';
+                break;
+            case (16):
+                letterNif = 'Q';
+                break;
+            case (17):
+                letterNif = 'V';
+                break;
+            case (18):
+                letterNif = 'H';
+                break;
+            case (19):
+                letterNif = 'L';
+                break;
+            case (20):
+                letterNif = 'C';
+                break;
+            case (21):
+                letterNif = 'K';
+                break;
+            case (22):
+                letterNif = 'E';
+                break;
+            default: System.out.println("ERROR: Introducde un DNI Válido.");
+                break;
+        }
 
+        return letterNif;
     }
+
 }
 
