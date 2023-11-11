@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import javax.swing.*;
 
 public class Utils {
 
@@ -53,13 +53,14 @@ public class Utils {
         }
         return monedas;
     }
-    public static double getNIF(int numberDni) {
+
+    public static boolean getNIF(int numberDni) {
         int numberLetter = numberDni % 23;
         char letterNif = 'T';
-        switch (numberLetter){
+        switch (numberLetter) {
             case (1):
-               letterNif = 'R';
-               break;
+                letterNif = 'R';
+                break;
             case (2):
                 letterNif = 'W';
                 break;
@@ -123,12 +124,17 @@ public class Utils {
             case (22):
                 letterNif = 'E';
                 break;
-            default: System.out.println("ERROR: Introducde un DNI Válido.");
+            default:
+                System.out.println("ERROR: Introducde un DNI Válido.");
                 break;
         }
 
         return letterNif;
     }
 
+    public static boolean isValidNIF(int numberNif, char letterNif) {
+        letterNif = Character.toUpperCase(letterNif);
+        return getNIF(numberNif) == letterNif;
+    }
 }
 
