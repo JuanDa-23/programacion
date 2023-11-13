@@ -15,20 +15,8 @@ public class Proyect {
         System.out.println("Introduce el valor de los atributos, pueden estar comprendidos entre el 1 el 200.\nLa suma total de los atributos introducidos no puede superar los 500 puntos");
 
         //Introducción Atributos Personaje//
-        System.out.print("Introduce los puntos de Velocidad: ");
-        int puntosVelocidad = scanner.nextInt();
-        System.out.print("Introduce los puntos de Ataque: ");
-        int puntosAtaque = scanner.nextInt();
-        System.out.print("Introduce los puntos de Defensa: ");
-        int puntosDefensa = scanner.nextInt();
-        System.out.print("Introduce los puntos de Vida: ");
-        int puntosVida = scanner.nextInt();
 
-        if (configurePoint(puntosVelocidad, puntosAtaque, puntosDefensa, puntosVida)) {
-            System.out.println("Ahora, le daré yo puntos a mi Guerrero");
-        } else {
-            System.out.println("Error, vuelve a introducir los puntos ");
-        }
+        showMenu();
 
         //Atributos NPC//
         Random random = new Random();
@@ -66,6 +54,24 @@ public class Proyect {
         }
     }
 
+    public static void showMenu () {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Introduce los puntos de Velocidad: ");
+        int puntosVelocidad = scanner.nextInt();
+        System.out.print("Introduce los puntos de Ataque: ");
+        int puntosAtaque = scanner.nextInt();
+        System.out.print("Introduce los puntos de Defensa: ");
+        int puntosDefensa = scanner.nextInt();
+        System.out.print("Introduce los puntos de Vida: ");
+        int puntosVida = scanner.nextInt();
+
+        if (configurePoint(puntosVelocidad, puntosAtaque, puntosDefensa, puntosVida)) {
+            System.out.println("Ahora, le daré yo puntos a mi Guerrero");
+        } else {
+            System.out.println("Error, vuelve a introducir los puntos ");
+        }
+
+    }
 
 /*
         //Generación de RONDAS//
