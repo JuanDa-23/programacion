@@ -14,31 +14,9 @@ public class Proyect {
                 "   #    #  #   ####           ##    #   #  #   #  ####\n");
         System.out.println("Introduce el valor de los atributos, pueden estar comprendidos entre el 1 el 200.\nLa suma total de los atributos introducidos no puede superar los 500 puntos");
 
-        //Introducción Atributos Personaje//
-
         showMenu();
 
-        //Atributos NPC//
-        Random random = new Random();
-        int randomInt = random.nextInt(50, 200);
-
-        int velocidadNpc = random.nextInt(50, 201);
-        System.out.println("La Velocidad será de: " + velocidadNpc);
-        int ataqueNpc = random.nextInt(50, 201);
-        System.out.println("El Ataque será de: " + ataqueNpc);
-        int defensaNpc = random.nextInt(50, 201);
-        System.out.println("La Defensa será de: " + defensaNpc);
-        int vidaNpc = random.nextInt(50, 201);
-        System.out.println("La Vida será de: " + vidaNpc);
-
-        if (configurePointNpc(velocidadNpc, ataqueNpc, defensaNpc, vidaNpc)) {
-            System.out.println("Empecemos las rondas");
-            System.out.println("____________________________________________________________________________________________________");
-        }
-
-
     }
-
     public static boolean configurePoint(int puntosVelocidad, int puntosAtaque, int puntosDefensa, int puntosVida) {
         if ((puntosVelocidad + puntosAtaque + puntosDefensa + puntosVida < 501) && (puntosVelocidad < 201 && puntosVelocidad > 0 || puntosAtaque < 201 && puntosAtaque > 0 || puntosDefensa < 201 && puntosDefensa > 0 || puntosVida < 201 && puntosVida > 0)) {
             return true;
@@ -46,6 +24,7 @@ public class Proyect {
             return false;
         }
     }
+
     public static boolean configurePointNpc(int velocidadNpc, int ataqueNpc, int defensaNpc, int vidaNpc) {
         if ((velocidadNpc + ataqueNpc + defensaNpc + vidaNpc < 501) && (velocidadNpc <= 201 && velocidadNpc > 0 || ataqueNpc <= 201 && ataqueNpc > 0 || defensaNpc <= 201 && defensaNpc > 0 || vidaNpc <= 201 && velocidadNpc > 0)) {
             return true;
@@ -54,7 +33,9 @@ public class Proyect {
         }
     }
 
-    public static void showMenu () {
+    public static void showMenu() {
+        //Introducción Atributos Personaje//
+
         Scanner scanner = new Scanner(System.in);
         System.out.print("Introduce los puntos de Velocidad: ");
         int puntosVelocidad = scanner.nextInt();
@@ -70,6 +51,9 @@ public class Proyect {
         } else {
             System.out.println("Error, vuelve a introducir los puntos ");
         }
+
+        //Atributos NPC//
+
         Random random = new Random();
         int randomInt = random.nextInt(50, 200);
 
@@ -87,8 +71,7 @@ public class Proyect {
             System.out.println("____________________________________________________________________________________________________");
         }
     }
-
-/*
+    /*
         //Generación de RONDAS//
         int i = 1;
         while (puntosVida > 0 && vidaNpc > 0) {
