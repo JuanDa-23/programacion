@@ -70,7 +70,22 @@ public class Proyect {
         } else {
             System.out.println("Error, vuelve a introducir los puntos ");
         }
+        Random random = new Random();
+        int randomInt = random.nextInt(50, 200);
 
+        int velocidadNpc = random.nextInt(50, 201);
+        System.out.println("La Velocidad será de: " + velocidadNpc);
+        int ataqueNpc = random.nextInt(50, 201);
+        System.out.println("El Ataque será de: " + ataqueNpc);
+        int defensaNpc = random.nextInt(50, 201);
+        System.out.println("La Defensa será de: " + defensaNpc);
+        int vidaNpc = random.nextInt(50, 201);
+        System.out.println("La Vida será de: " + vidaNpc);
+
+        if (configurePointNpc(velocidadNpc, ataqueNpc, defensaNpc, vidaNpc)) {
+            System.out.println("Empecemos las rondas");
+            System.out.println("____________________________________________________________________________________________________");
+        }
     }
 
 /*
