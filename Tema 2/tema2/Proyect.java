@@ -14,11 +14,11 @@ public class Proyect {
                 "   #    #  #   ####           ##    #   #  #   #  ####\n");
         System.out.println("Introduce el valor de los atributos, pueden estar comprendidos entre el 1 el 200.\nLa suma total de los atributos introducidos no puede superar los 500 puntos");
 
-        showMenu();
+       /*   showMenu();
 
         //Generación de RONDAS//
 
-        int i = 1;
+      int i = 1;
         while (puntosVida > 0 && vidaNpc > 0) {
             System.out.println("____________________________________________________________________________________________________");
             System.out.println("RONDA " + i);
@@ -131,6 +131,6 @@ public class Proyect {
             System.out.println("Empecemos las rondas");
             System.out.println("____________________________________________________________________________________________________");
         }
-    }
+    }*/
 
-}
+}}
