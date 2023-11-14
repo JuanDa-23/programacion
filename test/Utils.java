@@ -54,7 +54,7 @@ public class Utils {
         return monedas;
     }
 
- /*   public static boolean getNIF(int numberDni) {
+   public static boolean getNIF(int numberDni) {
         int numberLetter = numberDni % 23;
         char letterNif = 'T';
         switch (numberLetter) {
@@ -129,8 +129,8 @@ public class Utils {
                 break;
         }
 
-        return letterNif;
-    }
+       return false;
+   }
 
     public static boolean isValidNIF(int number, char letter){
         boolean verify = false;
@@ -140,7 +140,5 @@ public class Utils {
             verify =true;
         }else verify = false;
         return verify;
-    }*/
+    }
 }
-
-//No entiendo los dos ultimos (ayudado)
