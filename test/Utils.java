@@ -134,7 +134,7 @@ public class Utils {
 
     public static boolean isValidNIF(int numberDni, char letterNif) {
         letterNif = Character.toUpperCase(letterNif);
-        return getNIF(numberDni) == letterNif;
+        return letterNif == getNIF(numberDni);
     }
 
 }
