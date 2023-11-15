@@ -21,40 +21,40 @@ public class Utils {
         return result;
     }
 
-    public static double getCoins(double total) {
+    public static double getCoins(double euros) {
         int monedas = 0;
-        int dinero = (int) Math.round(total * 100);
-        while (dinero > 0) {
-            if (dinero >= 200) {
-                dinero -= 200;
+        int cents = (int) Math.round(euros * 100);
+        while (cents > 0) {
+            if (cents >= 200) {
+                cents -= 200;
                 monedas += 10000000;
-            } else if (dinero >= 100) {
-                dinero -= 100;
+            } else if (cents >= 100) {
+                cents -= 100;
                 monedas += 1000000;
-            } else if (dinero >= 50) {
-                dinero -= 50;
+            } else if (cents >= 50) {
+                cents -= 50;
                 monedas += 100000;
-            } else if (dinero >= 20) {
-                dinero -= 20;
+            } else if (cents >= 20) {
+                cents -= 20;
                 monedas += 10000;
-            } else if (dinero >= 10) {
-                dinero -= 10;
+            } else if (cents >= 10) {
+                cents -= 10;
                 monedas += 1000;
-            } else if (dinero >= 5) {
-                dinero -= 5;
+            } else if (cents >= 5) {
+                cents -= 5;
                 monedas += 100;
-            } else if (dinero >= 2) {
-                dinero -= 2;
+            } else if (cents >= 2) {
+                cents -= 2;
                 monedas += 10;
             } else {
-                dinero -= 1;
+                cents -= 1;
                 monedas += 1;
             }
         }
         return monedas;
     }
 
-   public static boolean getNIF(int numberDni) {
+   public static char getNIF(int numberDni) {
         int numberLetter = numberDni % 23;
         char letterNif = 'T';
         switch (numberLetter) {
@@ -125,11 +125,11 @@ public class Utils {
                 letterNif = 'E';
                 break;
             default:
-                System.out.println("ERROR: Introducde un DNI Válido.");
+                System.out.println("ERROR: Introduce un DNI Válido.");
                 break;
         }
 
-       return false;
+       return letterNif;
    }
 
     public static boolean isValidNIF(int numberDni, char letterNif) {
