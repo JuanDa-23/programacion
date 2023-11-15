@@ -132,9 +132,9 @@ public class Utils {
        return false;
    }
 
-  /*  public static boolean isValidNIF(int numberNif, char letterNif) {
+    public static boolean isValidNIF(int numberDni, char letterNif) {
         letterNif = Character.toUpperCase(letterNif);
-        return letterNif == getNIF(numberNif);
+        return letterNif == getNIF(numberDni);
     }
-*/
+
 }

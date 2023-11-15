@@ -49,12 +49,12 @@ class UtilsTest {
         assertEquals( 'Z', Utils.getNIF(12345678));
     }
 
-  /*  @Test
+    @Test
     void isValidNIFTest() {
         assertTrue(Utils.isValidNIF(12345678,'Z'));
         assertTrue(Utils.isValidNIF(12345678,'z'));
         assertFalse(Utils.isValidNIF(12345678,'A'));
     }
-*/
+
 
 }
