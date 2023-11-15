@@ -1,6 +1,5 @@
-package tema2;
+package tema2.Tema;
 
-import java.util.Random;
 import java.util.Scanner;
 
 public class Proyect {
@@ -134,7 +133,3 @@ public class Proyect {
     }*/
 
 }}
-
-/*
-
-*/
