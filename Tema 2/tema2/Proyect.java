@@ -18,12 +18,12 @@ public class Proyect {
     public static void main(String[] args) {
 
         showMenu();
-        /*if (configureAttributes()) {
+        if (configureAttributes()) {
             System.out.println("_______".repeat(10));
         } else {
             System.out.println("Vuelve a introducir los valores: ");
             showMenu();
-        }*/
+        }
         generateRounds();
 
     }
@@ -63,7 +63,7 @@ public class Proyect {
     }
 
     //Bucles entre funciones
-   /* public static boolean configureAttributes() {
+    public static boolean configureAttributes() {
         boolean atributosSonCorrectos = false;
         while (!atributosSonCorrectos) {
             atributosSonCorrectos = configureAttributes();
@@ -72,7 +72,7 @@ public class Proyect {
             atributosSonCorrectos = true;
         }
         return atributosSonCorrectos;
-    }*/
+    }
 
         public static void generateRounds() {
         //Generación de RONDAS//
