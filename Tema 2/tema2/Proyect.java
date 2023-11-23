@@ -18,12 +18,7 @@ public class Proyect {
     public static void main(String[] args) {
 
         showMenu();
-        if (configureAttributes()) {
-            System.out.println("_______".repeat(10));
-        } else {
-            System.out.println("Vuelve a introducir los valores: ");
-            showMenu();
-        }
+        configureAttributes();
         generateRounds();
 
     }
@@ -51,26 +46,28 @@ public class Proyect {
 
         //Atributos NPC//
         System.out.println("Ahora, le daré yo puntos a mi Guerrero");
-        System.out.println("La Velocidad será de: " + speed2);
         speed2 = random.nextInt(50, 201);
-        System.out.println("El Ataque será de: " + damage2);
+        System.out.println("La Velocidad será de: " + speed2);
         damage2 = random.nextInt(50, 201);
-        System.out.println("La Defensa será de: " + defense2);
+        System.out.println("El Ataque será de: " + damage2);
         defense2 = random.nextInt(50, 201);
-        System.out.println("La Vida será de: " + life2);
+        System.out.println("La Defensa será de: " + defense2);
         life2 = random.nextInt(50, 201);
+        System.out.println("La Vida será de: " + life2);
+
 
     }
 
-    //Bucles entre funciones
     public static boolean configureAttributes() {
         boolean atributosSonCorrectos = false;
         while (!atributosSonCorrectos) {
             atributosSonCorrectos = configureAttributes();
         }
+
         if ((speed1 + damage1 + defense1 + life1 < 501) && (speed1 <= 201 && speed1 > 0 || damage1 <= 201 && damage1 > 0 || defense1 <= 201 && defense1 > 0 || life1 <= 201 && life1 > 0)) {
             atributosSonCorrectos = true;
         }
+
         return atributosSonCorrectos;
     }
 
