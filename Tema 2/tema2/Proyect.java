@@ -66,9 +66,11 @@ public class Proyect {
 
         if ((speed1 + damage1 + defense1 + life1 < 501) && (speed1 <= 201 && speed1 > 0 || damage1 <= 201 && damage1 > 0 || defense1 <= 201 && defense1 > 0 || life1 <= 201 && life1 > 0)) {
             atributosSonCorrectos = true;
+        } else if ((speed2 + damage2 + defense2 + life2 < 501) && (speed2 <= 201 && speed2 > 0 || damage2 <= 201 && damage2 > 0 || defense2 <= 201 && defense2 > 0 || life2 <= 201 && life2 > 0)) {
+            atributosSonCorrectos = true;
         }
+            return atributosSonCorrectos;
 
-        return atributosSonCorrectos;
     }
 
         public static void generateRounds() {
