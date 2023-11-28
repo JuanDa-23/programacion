@@ -5,13 +5,13 @@ import java.util.Scanner;
 public class Ejercicio1 {
    /* static int[] array = new int[]{0,1,2,3,4,5};
     public static void main(String[] args) {
-        creatArray();
+        showArray();
         System.out.println(array.toString(max(array)));
         mayorArray();
 
     }
 
-    public static void creatArray() {
+    public static void showArray() {
         array [0] = 0;
         for (int i = 0; i < array.length; i++) {
             array[i] = i;
