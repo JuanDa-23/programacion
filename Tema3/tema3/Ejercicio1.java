@@ -7,11 +7,15 @@ public class Ejercicio1 {
     static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
         showArray();
-        System.out.println(maxArray(array));
-        System.out.println(minArray(array));
-        System.out.println(mediaArray(array));
+        System.out.println("_______".repeat(20));
+        System.out.println("El número máximo es " + maxArray(array));
+        System.out.println("_______".repeat(20));
+        System.out.println("El número mínimo es " + minArray(array));
+        System.out.println("_______".repeat(20));
+        System.out.println("La media es de " + mediaArray(array));
+        System.out.println("_______".repeat(20));
         existeArray(array);
-
+        System.out.println("_______".repeat(20));
     }
 
     public static void showArray() {
@@ -50,17 +54,20 @@ public class Ejercicio1 {
    }
 
     public static void existeArray(int[] array) {
-        System.out.println("Introduce un valor:");
-        int number = scanner.nextInt();
         array [0] = 0;
         for (int i = 0; i < array.length; i++) {
             array[i] = i;
+            System.out.println("Introduce un valor:");
+            int number = scanner.nextInt();
             if (number == i) {
                 System.out.println("El número existe.");
             }else {
                 System.out.println("El número no existe.");
-                break;
+                number++;
             }
         }
+    }
+    public static int sumatoryArray(int[] array){
+
     }
 }
