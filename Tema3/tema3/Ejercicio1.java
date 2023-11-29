@@ -3,28 +3,29 @@ package tema3;
 import java.util.Scanner;
 
 public class Ejercicio1 {
-    static int[] array = new int[]{0, 1, 2, 3, 4, 5};
+    static int[] array1 = new int[]{0, 1, 2, 3, 4, 5};
     static  int[] array2 = new int[]{7, 5, 9, 0, 8, 3};
+    static  int[] array3 = new int[]{0, 0, 0, 0, 0, 0};
     static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
         showArray();
         System.out.println("_______".repeat(20));
-        System.out.println("El número máximo es " + maxArray(array));
+        System.out.println("El número máximo es " + maxArray(array1));
         System.out.println("_______".repeat(20));
-        System.out.println("El número mínimo es " + minArray(array));
+        System.out.println("El número mínimo es " + minArray(array1));
         System.out.println("_______".repeat(20));
-        System.out.println("La media es de " + mediaArray(array));
+        System.out.println("La media es de " + mediaArray(array1));
         System.out.println("_______".repeat(20));
-        existeArray(array);
+        existeArray(array1);
         System.out.println("_______".repeat(20));
     }
 
     public static void showArray() {
-        array[0] = 0;
-        for (int i = 0; i < array.length; i++) {
-            array[i] = i;
-            System.out.println(array[i]);
+        array1[0] = 0;
+        for (int i = 0; i < array1.length; i++) {
+            array1[i] = i;
+            System.out.println(array1[i]);
         }
     }
 
@@ -73,13 +74,12 @@ public class Ejercicio1 {
         }
     }
 
-    public static int sumatoryArray(int[] array) {
-        int result = 0;
-        for (int i = 0; i < array.length; i++) {
-            array[i] = i;
-            for (int j = 0; j < array.length; j++)
+    public static int[] sumaArray(int[] array1, int[] array2) {
+        int[] result = new int [array1.length];
 
-            array[i] + array2[j] = result;
+        for (int i = 0; i < array1.length; i++) {
+            System.out.println(array1[i]);
+            result[i] = array1[i] + array2[i];
         }
         return result;
 
