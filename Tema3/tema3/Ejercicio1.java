@@ -4,11 +4,10 @@ package tema3;
 import java.util.Scanner;
 
 public class Ejercicio1 {
-    static int[] array2 = new int[6];
     static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
         int[] array1 = creatArray();
-        //int[] array2 = creatArray();
+        int[] array2 = creatArray();
         showMenu();
         System.out.println("Introduce un número: ");
         int option = scanner.nextInt();
@@ -22,7 +21,6 @@ public class Ejercicio1 {
             case 3:
                 minArray(array1);
                 break;
-
             case 4:
                 mediaArray(array1);
                 break;
@@ -46,8 +44,6 @@ public class Ejercicio1 {
                 break;
             case 0:
                 break;
-            default:
-
         }
     }
 
@@ -89,7 +85,6 @@ public class Ejercicio1 {
                 max = array[i];
             }
         }
-        System.out.println("El máximo es: " + max);
         return max;
     }
 
@@ -99,7 +94,6 @@ public class Ejercicio1 {
             if (array[i] < min) {
                 min = array[i];
             }
-
         }
         return min;
     }
@@ -123,21 +117,17 @@ public class Ejercicio1 {
         }
         return exist;
     }
-
     public static int[] sumaArray(int[] array1, int[] array2) {
         int[] result = new int[array1.length];
-
         for (int i = 0; i < array1.length; i++) {
             System.out.println(array1[i]);
             result[i] = array1[i] + array2[i];
         }
         return result;
-
     }
 
     public static int[] restaArray(int[] array1, int[] array2) {
         int[] result = new int[array1.length];
-
         for (int i = 0; i < array1.length; i++) {
             System.out.println(array1[i]);
             result[i] = array1[i] - array2[i];
@@ -152,7 +142,8 @@ public class Ejercicio1 {
         for (int i = 0; i < array1.length; i++) {
             System.out.println(array1[i]);
             // sumatorio de los productos
-            result[i] = array1[i] * array2[i];
+
+            result += array1[i] * array2[i];
         }
         return result;
 
