@@ -34,7 +34,7 @@ public class Ejercicio1 {
                 restaArray(array1, array2);
                 break;
             case 8:
-                multiplicaArray(array1, array2);
+                productoArray(array1, array2);
                 break;
             case 9:
                 invertirArray(array1);
@@ -48,7 +48,7 @@ public class Ejercicio1 {
     }
 
     public static int[] creatArray() {
-        System.out.println("Introduce los valores del vector 1 (hasta 6)");
+        System.out.println("Introduce los valores del vector (hasta 6)");
         int[] array1 = new int[6];
         for (int i = 0; i < 6; i++) {
             array1[i] = scanner.nextInt();
@@ -62,7 +62,7 @@ public class Ejercicio1 {
         System.out.println("2) Maximo de tu array");
         System.out.println("3) Minimo de tu array");
         System.out.println("4) Media de tu array");
-        System.out.println("5) Te digo si tu array existe");
+        System.out.println("5) ¿Existe el valor en tu array?");
         System.out.println("6) Suma de dos vectores");
         System.out.println("7) Resta de dos vectores");
         System.out.println("8) Producto esclar de dos vectores");
@@ -136,15 +136,16 @@ public class Ejercicio1 {
 
     }
 
-    public static int multiplicaArray(int[] array1, int[] array2) {
+    public static int productoArray(int[] array1, int[] array2) {
         int result = 0;
-
-        for (int i = 0; i < array1.length; i++) {
-            System.out.println(array1[i]);
-            // sumatorio de los productos
-
-            result += array1[i] * array2[i];
+        if (array1.length == array2.length){
+            for (int i = 0; i < array1.length; i++) {
+                System.out.println(array1[i]);
+                // sumatorio de los productos
+                result += array1[i] * array2[i] ;
+            }
         }
+
         return result;
 
     }
@@ -166,23 +167,6 @@ public class Ejercicio1 {
         System.out.println();
         return array1;
     }
-
-    /* public static void invertirArray2(int[] array1) {
-         int inicio = 0;
-         int fin = array1.length - 1;
-
-         while (inicio < fin) {
-             int temp = array1[inicio];
-             array1[inicio] = array1[fin];
-             array1[fin] = temp;
-             inicio++;
-             fin--;
-         }
-         for (int i = 0; i < array1.length; i++) {
-             System.out.print(array1[i] + " ");
-         }
-         System.out.println();
-     }*/
     public static boolean capicuaArray(int[] array1) {
         int longitud = array1.length;
         for (int i = 0; i < longitud / 2; i++) {
