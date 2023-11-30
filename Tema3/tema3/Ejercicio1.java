@@ -11,24 +11,59 @@ public class Ejercicio1 {
 
     public static void main(String[] args) {
         showMenu();
+        switch (){
+            case 1:
+                showArray();
+                break;
+            case 2:
+                maxArray(array1);
+                break;
+            case 3:
+                minArray(array1);
+                break;
+            case 4:
+                mediaArray(array1);
+                break;
+            case 5:
+                existeArray(array1);
+                break;
+            case 6:
+                sumaArray(array1, array2);
+                break;
+            case 7:
+                restaArray(array1, array2);
+                break;
+            case 8:
+                multiplicaArray(array1, array2);
+                break;
+            case 9:
+                invertirArray(array1);
+                break;
+            case 10:
+                capicuaArray(array1);
+                break;
+            default:
+                System.out.println("Saliste");
+
+
+        }
     }
 
     public static void showMenu() {
-        showArray();
-        System.out.println("_______".repeat(20));
-        System.out.println("El número máximo es " + maxArray(array1));
-        System.out.println("_______".repeat(20));
-        System.out.println("El número mínimo es " + minArray(array1));
-        System.out.println("_______".repeat(20));
-        System.out.println("La media es de " + mediaArray(array1));
-        System.out.println("_______".repeat(20));
-        existeArray(array1);
-        System.out.println("_______".repeat(20));
-        System.out.println("La suma de los vectores es " + sumaArray(array1, array2));
-        System.out.println("La resta de los vectores es " + restaArray(array1, array2));
-        System.out.println("La multiplicación de los vectores es " + multiplicaArray(array1, array2));
-        invertirArray(array1);
-        capicuaArray(array1);
+        System.out.println("Introduce los valores del vector 1 (hasta 6)");
+        int[] array1 = scanner.nextInt;
+
+        System.out.println("Escribe el número segun lo que quieras:");
+        System.out.println("1) Imprimir el array");
+        System.out.println("2) Maximo de tu array");
+        System.out.println("3) Minimo de tu array");
+        System.out.println("4) Media de tu array");
+        System.out.println("5) Te digo si tu array existe");
+        System.out.println("6) Suma de dos vectores");
+        System.out.println("7) Resta de dos vectores");
+        System.out.println("8) Producto esclar de dos vectores");
+        System.out.println("9) Invertir el numero de un array");
+        System.out.println("10) Indica si el array es capicua o no");
     }
 
     public static void showArray() {
