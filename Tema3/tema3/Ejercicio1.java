@@ -8,8 +8,8 @@ public class Ejercicio1 {
     static int[] array2 = new int[6];
     static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
-        showMenu();
         creatArray();
+        showMenu();
         System.out.println("Introduce un número: ");
         int option = scanner.nextInt();
         switch (option){
@@ -22,6 +22,7 @@ public class Ejercicio1 {
             case 3:
                 minArray(array1);
                 break;
+
             case 4:
                 mediaArray(array1);
                 break;
