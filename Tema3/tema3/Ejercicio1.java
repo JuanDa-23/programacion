@@ -51,8 +51,11 @@ public class Ejercicio1 {
 
     public static void showMenu() {
         System.out.println("Introduce los valores del vector 1 (hasta 6)");
-        int[] array1 = scanner.nextInt;
+        int[] array1 = new int[6];
 
+        for (int i = 0; i < 6; i++) {
+            array1[i] = scanner.nextInt();
+        }
         System.out.println("Escribe el número segun lo que quieras:");
         System.out.println("1) Imprimir el array");
         System.out.println("2) Maximo de tu array");
