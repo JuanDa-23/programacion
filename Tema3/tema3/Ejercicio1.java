@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 public class Ejercicio1 {
     static int[] array1 = new int[]{0, 1, 2, 3, 4, 5};
-    static  int[] array2 = new int[]{7, 5, 9, 0, 8, 3};
-    static  int[] array3 = new int[]{0, 0, 0, 0, 0, 0};
+    static int[] array2 = new int[]{7, 5, 9, 0, 8, 3};
+    static int[] array3 = new int[6];
     static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
@@ -17,8 +17,12 @@ public class Ejercicio1 {
         System.out.println("_______".repeat(20));
         System.out.println("La media es de " + mediaArray(array1));
         System.out.println("_______".repeat(20));
-        existeArray(array1);
-        System.out.println("_______".repeat(20));
+        //existeArray(array1);
+        //System.out.println("_______".repeat(20));
+        System.out.println("La suma de los vectores es " + sumaArray(array1, array2));
+        System.out.println("La resta de los vectores es " + restaArray(array1, array2));
+        System.out.println("La multiplicación de los vectores es " + multiplicaArray(array1, array2));
+        invertirArray(array3);
     }
 
     public static void showArray() {
@@ -59,7 +63,7 @@ public class Ejercicio1 {
         return sumatory;
     }
 
-    public static void existeArray(int[] array) {
+ /*   public static void existeArray(int[] array) {
         array[0] = 0;
         for (int i = 0; i < array.length; i++) {
             array[i] = i;
@@ -72,10 +76,10 @@ public class Ejercicio1 {
 
             }
         }
-    }
+    }*/
 
     public static int[] sumaArray(int[] array1, int[] array2) {
-        int[] result = new int [array1.length];
+        int[] result = new int[array1.length];
 
         for (int i = 0; i < array1.length; i++) {
             System.out.println(array1[i]);
@@ -83,5 +87,42 @@ public class Ejercicio1 {
         }
         return result;
 
+    }
+
+    public static int[] restaArray(int[] array1, int[] array2) {
+        int[] result = new int[array1.length];
+
+        for (int i = 0; i < array1.length; i++) {
+            System.out.println(array1[i]);
+            result[i] = array1[i] - array2[i];
+        }
+        return result;
+
+    }
+
+    public static int[] multiplicaArray(int[] array1, int[] array2) {
+        int[] result = new int[array1.length];
+
+        for (int i = 0; i < array1.length; i++) {
+            System.out.println(array1[i]);
+            result[i] = array1[i] * array2[i];
+        }
+        return result;
+
+    }
+
+    public static int[] invertirArray(int[] array1) {
+        int inicio = 0;
+        int fin = array1.length - 1;
+
+        while (inicio < fin) {
+            int temp = array1[inicio];
+            array1[inicio] = array1[fin];
+            array1[fin] = temp;
+            inicio++;
+            fin--;
+
+        }
+        return array1;
     }
 }
