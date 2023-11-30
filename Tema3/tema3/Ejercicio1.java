@@ -1,3 +1,4 @@
+//JMJ
 package tema3;
 
 import java.util.Scanner;
@@ -9,6 +10,10 @@ public class Ejercicio1 {
     static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
+        showMenu();
+    }
+
+    public static void showMenu() {
         showArray();
         System.out.println("_______".repeat(20));
         System.out.println("El número máximo es " + maxArray(array1));
@@ -17,12 +22,13 @@ public class Ejercicio1 {
         System.out.println("_______".repeat(20));
         System.out.println("La media es de " + mediaArray(array1));
         System.out.println("_______".repeat(20));
-        //existeArray(array1);
-        //System.out.println("_______".repeat(20));
+        existeArray(array1);
+        System.out.println("_______".repeat(20));
         System.out.println("La suma de los vectores es " + sumaArray(array1, array2));
         System.out.println("La resta de los vectores es " + restaArray(array1, array2));
         System.out.println("La multiplicación de los vectores es " + multiplicaArray(array1, array2));
-        invertirArray(array3);
+        invertirArray(array1);
+        capicuaArray(array1);
     }
 
     public static void showArray() {
@@ -63,7 +69,7 @@ public class Ejercicio1 {
         return sumatory;
     }
 
- /*   public static void existeArray(int[] array) {
+    public static void existeArray(int[] array) {
         array[0] = 0;
         for (int i = 0; i < array.length; i++) {
             array[i] = i;
@@ -76,7 +82,7 @@ public class Ejercicio1 {
 
             }
         }
-    }*/
+    }
 
     public static int[] sumaArray(int[] array1, int[] array2) {
         int[] result = new int[array1.length];
@@ -121,8 +127,38 @@ public class Ejercicio1 {
             array1[fin] = temp;
             inicio++;
             fin--;
-
         }
+        for (int i = 0; i < array1.length; i++) {
+            System.out.print(array1[i] + " ");
+        }
+        System.out.println();
         return array1;
     }
+
+    /* public static void invertirArray2(int[] array1) {
+         int inicio = 0;
+         int fin = array1.length - 1;
+
+         while (inicio < fin) {
+             int temp = array1[inicio];
+             array1[inicio] = array1[fin];
+             array1[fin] = temp;
+             inicio++;
+             fin--;
+         }
+         for (int i = 0; i < array1.length; i++) {
+             System.out.print(array1[i] + " ");
+         }
+         System.out.println();
+     }*/
+    public static boolean capicuaArray(int[] array1) {
+        int longitud = array1.length;
+        for (int i = 0; i < longitud / 2; i++) {
+            if (array1[i] != array1[longitud - 1 - i]) {
+                return false;
+            }
+        }
+        return true;
+    }
 }
+
