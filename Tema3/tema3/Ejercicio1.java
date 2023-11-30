@@ -142,7 +142,8 @@ public class Ejercicio1 {
             for (int i = 0; i < array1.length; i++) {
                 System.out.println(array1[i]);
                 // sumatorio de los productos
-                result += array1[i] * array2[i] ;
+                array1[i] = array1[i] * array2[i] ;
+                result += array1[i];
             }
         }
 
