@@ -4,17 +4,17 @@ package tema3;
 import java.util.Scanner;
 
 public class Ejercicio1 {
-    static int[] array1 = new int[6];
     static int[] array2 = new int[6];
     static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
-        creatArray();
+        int[] array1 = creatArray();
+        //int[] array2 = creatArray();
         showMenu();
         System.out.println("Introduce un número: ");
         int option = scanner.nextInt();
         switch (option){
             case 1:
-                showArray();
+                showArray(array1);
                 break;
             case 2:
                 maxArray(array1);
@@ -54,7 +54,6 @@ public class Ejercicio1 {
     public static int[] creatArray() {
         System.out.println("Introduce los valores del vector 1 (hasta 6)");
         int[] array1 = new int[6];
-
         for (int i = 0; i < 6; i++) {
             array1[i] = scanner.nextInt();
         }
@@ -75,7 +74,7 @@ public class Ejercicio1 {
         System.out.println("10) Indica si el array es capicua o no");
     }
 
-    public static void showArray() {
+    public static void showArray(int[] array1) {
         array1[0] = 0;
         for (int i = 0; i < array1.length; i++) {
             array1[i] = i;
@@ -89,7 +88,6 @@ public class Ejercicio1 {
             if (array[i] > max) {
                 max = array[i];
             }
-
         }
         System.out.println("El máximo es: " + max);
         return max;
@@ -114,19 +112,16 @@ public class Ejercicio1 {
         return sumatory;
     }
 
-    public static void existeArray(int[] array) {
-        array[0] = 0;
+    public static boolean existeArray(int[] array) {
+        System.out.println("Introduce un valor:");
+        int number = scanner.nextInt();
+        boolean exist = false;
         for (int i = 0; i < array.length; i++) {
-            array[i] = i;
-            System.out.println("Introduce un valor:");
-            int number = scanner.nextInt();
-            if (number == i) {
-                System.out.println("El número existe.");
-            } else {
-                System.out.println("El número no existe.");
-
+            if (number == array[i]) {
+                exist = true;
             }
         }
+        return exist;
     }
 
     public static int[] sumaArray(int[] array1, int[] array2) {
@@ -151,11 +146,12 @@ public class Ejercicio1 {
 
     }
 
-    public static int[] multiplicaArray(int[] array1, int[] array2) {
-        int[] result = new int[array1.length];
+    public static int multiplicaArray(int[] array1, int[] array2) {
+        int result = 0;
 
         for (int i = 0; i < array1.length; i++) {
             System.out.println(array1[i]);
+            // sumatorio de los productos
             result[i] = array1[i] * array2[i];
         }
         return result;
