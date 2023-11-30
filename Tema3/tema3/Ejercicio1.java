@@ -90,6 +90,7 @@ public class Ejercicio1 {
             }
 
         }
+        System.out.println("El máximo es: " + max);
         return max;
     }
 
