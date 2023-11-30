@@ -4,14 +4,15 @@ package tema3;
 import java.util.Scanner;
 
 public class Ejercicio1 {
-    static int[] array1 = new int[]{0, 1, 2, 3, 4, 5};
-    static int[] array2 = new int[]{7, 5, 9, 0, 8, 3};
-    static int[] array3 = new int[6];
+    static int[] array1 = new int[6];
+    static int[] array2 = new int[6];
     static Scanner scanner = new Scanner(System.in);
-
     public static void main(String[] args) {
         showMenu();
-        switch (){
+        creatArray();
+        System.out.println("Introduce un número: ");
+        int option = scanner.nextInt();
+        switch (option){
             case 1:
                 showArray();
                 break;
@@ -42,20 +43,24 @@ public class Ejercicio1 {
             case 10:
                 capicuaArray(array1);
                 break;
+            case 0:
+                break;
             default:
-                System.out.println("Saliste");
-
 
         }
     }
 
-    public static void showMenu() {
+    public static int[] creatArray() {
         System.out.println("Introduce los valores del vector 1 (hasta 6)");
         int[] array1 = new int[6];
 
         for (int i = 0; i < 6; i++) {
             array1[i] = scanner.nextInt();
         }
+        return array1;
+    }
+
+    public static void showMenu() {
         System.out.println("Escribe el número segun lo que quieras:");
         System.out.println("1) Imprimir el array");
         System.out.println("2) Maximo de tu array");
