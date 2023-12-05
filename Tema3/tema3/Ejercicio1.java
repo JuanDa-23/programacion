@@ -137,20 +137,22 @@ public class Ejercicio1 {
     }
 
     public static int productoArray(int[] array1, int[] array2) {
-       //No funciona
+
         int result = 0;
-        if (array1.length == array2.length){
+        if (array1.length == array2.length) {
+            int[] tempArray = new int[array1.length];
             for (int i = 0; i < array1.length; i++) {
                 System.out.println(array1[i]);
-                // sumatorio de los productos
-                array1[i] = array1[i] * array2[i] ;
-                result += array1[i];
+                tempArray[i] = array1[i] * array2[i];
+            }
+            for (int i = 0; i < tempArray.length; i++) {
+                result += tempArray[i];
             }
         }
 
         return result;
-
     }
+
 
     public static int[] invertirArray(int[] array1) {
         int inicio = 0;
@@ -170,7 +172,6 @@ public class Ejercicio1 {
         return array1;
     }
     public static boolean capicuaArray(int[] array1) {
-        //No funciona?
         int longitud = array1.length;
         for (int i = 0; i < longitud / 2; i++) {
             if (array1[i] != array1[longitud - 1 - i]) {
