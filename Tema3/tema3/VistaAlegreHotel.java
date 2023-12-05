@@ -5,9 +5,7 @@ import java.util.Scanner;
 
 public class VistaAlegreHotel {
     static int[] arrayHotel = new int[20];
-    static Scanner in = new Scanner(System.in);
-
-    //static int[] arrayHotel;
+    static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
@@ -33,19 +31,19 @@ public class VistaAlegreHotel {
         int pre =  number;
         int post = number;
         for (int i = frequency - 1; i > 0; i--) {
-            pre--;
-            post++;
 
-            arrayHotel[pre] = i;
-            arrayHotel[post] = i;
+            if (pre > 0 &&  pre <= 20) {
+                pre--;
+                arrayHotel[pre] = i;
+            }
+            if (post >= 0 && post < 20) {
+                post++;
+                arrayHotel[post] = i;
+            }
+
             /*int distance = Math.abs(number - i + 1);
             arrayHotel[i] = Math.max(0, frequency - distance);
-            if (number > 0) {
-                arrayHotel[number - 1] = frequency - 1;
-            }
-            if (number < arrayHotel.length - 1) {
-                arrayHotel[number + 1] = frequency - 1;
-            }*/
+           */
         }
         System.out.println(Arrays.toString(arrayHotel));
     }
