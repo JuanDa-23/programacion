@@ -10,8 +10,6 @@ public class AtrapaMosca {
 
     public static void main(String[] args) {
 
-        arrayFly = new int[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-
         System.out.println("Busca la mosca! Pon un número del 0 al 15: ");
         boolean cazada = false;
         while (!cazada) {
