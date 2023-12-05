@@ -19,6 +19,7 @@ public class VistaAlegreHotel {
             System.out.println("Número de habitación inválido. Debe estar entre 1 y 20.");
             return;
         }
+        number--;
 
         System.out.println("Selecciona la frecuencia (1-6): ");
         int frequency = in.nextInt();
@@ -28,18 +29,23 @@ public class VistaAlegreHotel {
             return;
         }
 
-        arrayHotel[number - 1] = frequency;
+        arrayHotel[number] = frequency;
+        int pre =  number;
+        int post = number;
+        for (int i = frequency - 1; i > 0; i--) {
+            pre--;
+            post++;
 
-        if (number > 1) {
-            arrayHotel[number - 2] = frequency - 1;
-        }
-
-        if (number < arrayHotel.length) {
-            arrayHotel[number] = frequency - 1;
-        }
-        for (int i = 0; i < arrayHotel.length; i++) {
-            int distance = Math.abs(number - i + 1);
+            arrayHotel[pre] = i;
+            arrayHotel[post] = i;
+            /*int distance = Math.abs(number - i + 1);
             arrayHotel[i] = Math.max(0, frequency - distance);
+            if (number > 0) {
+                arrayHotel[number - 1] = frequency - 1;
+            }
+            if (number < arrayHotel.length - 1) {
+                arrayHotel[number + 1] = frequency - 1;
+            }*/
         }
         System.out.println(Arrays.toString(arrayHotel));
     }
