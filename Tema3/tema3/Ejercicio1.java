@@ -137,7 +137,6 @@ public class Ejercicio1 {
     }
 
     public static int productoArray(int[] array1, int[] array2) {
-
         int result = 0;
         if (array1.length == array2.length) {
             int[] tempArray = new int[array1.length];
@@ -146,7 +145,7 @@ public class Ejercicio1 {
                 tempArray[i] = array1[i] * array2[i];
             }
             for (int i = 0; i < tempArray.length; i++) {
-                result += tempArray[i];
+                tempArray[i] += result;
             }
         }
 
