@@ -12,8 +12,6 @@ public class VistaAlegreHotel {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
-        arrayHotel = new int[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-
         System.out.println("Selecciona un número de habitación(1-20): ");
         int number = in.nextInt();
 
