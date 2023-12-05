@@ -34,13 +34,13 @@ public class Ejercicio1 {
                 restaArray(array1, array2);
                 break;
             case 8:
-                productoArray(array1, array2);
+                System.out.println(productoArray(array1, array2));
                 break;
             case 9:
                 invertirArray(array1);
                 break;
             case 10:
-                capicuaArray(array1);
+                System.out.println(capicuaArray(array1));
                 break;
             case 0:
                 break;
@@ -141,11 +141,10 @@ public class Ejercicio1 {
         if (array1.length == array2.length) {
             int[] tempArray = new int[array1.length];
             for (int i = 0; i < array1.length; i++) {
-                System.out.println(array1[i]);
                 tempArray[i] = array1[i] * array2[i];
             }
             for (int i = 0; i < tempArray.length; i++) {
-                tempArray[i] += result;
+                result +=  tempArray[i];
             }
         }
 
