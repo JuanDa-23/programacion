@@ -7,15 +7,20 @@ public class MatrixEj1 {
     static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-     System.out.println(creatMatrix());
-}
+     creatMatrix();
+        System.out.println();
+     maxMatrix(matrix);
+
+
+
+    }
       public static int[][] creatMatrix() {
         System.out.println("Introduce los valores de la matriz: ");
 
-        int[][] Matrix1 = new int[3][3];
+        int[][] Matrix1 = new int[4][4];
         for (int i = 0; i < Matrix1.length; i++) {
             for (int j = 0; j < Matrix1[0].length; j++) {
-                System.out.print("Valor " + i + " " + j + ":");
+                System.out.print("Valor " + i + " " + j + ": ");
                 Matrix1[i][j] = scanner.nextInt();
             }
         }
@@ -24,6 +29,17 @@ public class MatrixEj1 {
         return Matrix1;
       }
 
+      public static int maxMatrix(int[][] matrix){
+          int max = matrix[0][0];
+          for (int i = 0; i < matrix.length; i++) {
+              for (int j = 0; j < matrix[0].length; j++) {
+                  if (matrix[i][j] > max){
+                      max = matrix[i][j];
+                  }
+              }
+          }
+          return max;
+      }
 }
 
 
