@@ -13,6 +13,7 @@ public class Ejerc1 {
                 break;
             case 1:
                 System.out.println("Elegiste el ejercicio 1: ");
+                Ejerc2.main(args);
                 break;
             case 2:
                 System.out.println("Elegiste el ejercicio 2: ");
