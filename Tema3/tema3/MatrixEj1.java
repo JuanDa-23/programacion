@@ -7,10 +7,10 @@ public class MatrixEj1 {
     static Scanner scanner = new Scanner(System.in);
    // static int[][] Matrix1 = scanner.nextInt();
     public static void main(String[] args) {
-     creatMatrix();
+   /*  creatMatrix();
         System.out.println();
      maxMatrix(Matrix1);
-
+*/
 
 
     }
@@ -29,8 +29,8 @@ public class MatrixEj1 {
         return Matrix1;
       }
 
-      public static int maxMatrix(int[][] matrix){
-          int max = matrix[][];
+     /*  public static int maxMatrix(int[][] matrix) {
+         int max = matrix[][];
           for (int i = 0; i < matrix.length; i++) {
               for (int j = 0; j < matrix[0].length; j++) {
                   if (matrix[i][j] > max){
@@ -40,7 +40,7 @@ public class MatrixEj1 {
           }
           return max;
       }
-}
+}*/
 
 
 
@@ -55,3 +55,4 @@ public class MatrixEj1 {
 
         System.out.println(Arrays.deepToString(Matrix1));
     }*/
+      }
