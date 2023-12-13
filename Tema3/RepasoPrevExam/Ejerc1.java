@@ -26,7 +26,8 @@ public class Ejerc1 {
         }
     }
     public static void showMenu() {
-        System.out.println("0) SALIR \n" +
+        System.out.println("Elige el ejercicio que desee: \n" +
+                "0) SALIR \n" +
                 "1) Ejercicio 1 \n" +
                 "2) Ejercicio 2 \n" +
                 "3) Ejercicio 3 \n" +
