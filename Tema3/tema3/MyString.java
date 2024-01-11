@@ -19,7 +19,7 @@ public class MyString {
 
     }
 
-    public static int countLetter(){
+   /* public static int countLetter(){
         for (int i = 0; i < cadena.length(); i++) {
             if (Objects.equals('a'))
              int totalVocales = 0;
@@ -27,7 +27,7 @@ public class MyString {
             i++;
         }
         return totalVocales;
-    }
+    }*/
 
 
 //indexofA
