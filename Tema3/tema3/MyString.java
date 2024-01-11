@@ -1,5 +1,7 @@
 package tema3;
 
+import java.util.Objects;
+
 public class MyString {
     static String cadena = "Mi primera cadena.";
     public static void main(String[] args){
@@ -19,10 +21,10 @@ public class MyString {
 
     public static int countLetter(){
         for (int i = 0; i < cadena.length(); i++) {
-            int totalVocales = 0;
-            char c = cadena.charAt(i);
-            if ((c == 'a') || (c == 'e') || (c == 'i') || (c == 'o') || (c == 'u'))
-                totalVocales++;
+            if (Objects.equals('a'))
+             int totalVocales = 0;
+             totalVocales ++;
+            i++;
         }
         return totalVocales;
     }
