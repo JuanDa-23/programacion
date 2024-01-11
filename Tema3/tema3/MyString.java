@@ -6,7 +6,7 @@ public class MyString {
     static String cadena = "Mi primera cadena.";
     public static void main(String[] args){
         System.out.println(convertString());
-        System.out.println(countLetter());
+        //System.out.println(countLetter());
     }
 
     public static String convertString() {
