@@ -16,26 +16,26 @@ public class repaso {
         int n2 = in.nextInt();
         System.out.println("Introduce el calculo que desee hacer: (S = +, R = -, M = *, D = /, A = % o E = Salir)");
         int option = in.nextInt();
-        switch (option){
-            case 'S':
-                System.out.println(n1 + " + " + n2 + " = " + (n1+n2));
-                break;
-            case 'R':
-                System.out.println(n1 + " - " + n2 + " = " + (n1-n2));
-                break;
-            case 'M':
-                System.out.println(n1 + " * " + n2 + " = " + (n1*n2));
-                break;
-            case 'D':
-                System.out.println(n1 + " / " + n2 + " = " + (n1/n2));
-                break;
-            case 'A':
-                System.out.println(n1 + " % " + n2 + " = " + (n1%n2));
-                break;
-            case 'E':
-                break;
+
+        while (option != 6) {
+            switch (option) {
+                case (1):
+                    System.out.println(n1 + " + " + n2 + " = " + (n1 + n2));
+                    break;
+                case 2:
+                    System.out.println(n1 + " - " + n2 + " = " + (n1 - n2));
+                    break;
+                case 3:
+                    System.out.println(n1 + " * " + n2 + " = " + (n1 * n2));
+                    break;
+                case 4:
+                    System.out.println(n1 + " / " + n2 + " = " + (n1 / n2));
+                    break;
+                case 5:
+                    System.out.println(n1 + " % " + n2 + " = " + (n1 % n2));
+                    break;
+            }
+
         }
-
-
     }
 }
