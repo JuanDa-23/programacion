@@ -15,11 +15,11 @@ public class repaso {
         System.out.println("Introduce otro número : ");
         int n2 = in.nextInt();
         System.out.println("Introduce el calculo que desee hacer: (S = +, R = -, M = *, D = /, A = % o E = Salir)");
-        int option = in.nextInt();
+        /*char option = in.next
 
-        while (option != 6) {
+        //while (option != 6) {
             switch (option) {
-                case ('a'):
+                case 'a':
                     System.out.println(n1 + " + " + n2 + " = " + (n1 + n2));
                     break;
                 case 2:
@@ -36,6 +36,6 @@ public class repaso {
                     break;
             }
 
-        }
+        //}*/
     }
 }

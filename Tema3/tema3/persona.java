@@ -35,7 +35,7 @@ package tema3;
             System.out.println("¡Hola " + nombre + "!");
         }
     }
-    public static final int default: 0;
+   
     public static void main(String[] args) { // En otro fichero
         Persona persona = new Persona();
         persona.nombre = "David";
