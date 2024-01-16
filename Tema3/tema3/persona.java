@@ -1,6 +1,6 @@
 package tema3;
 
-    /*public class Persona {
+    public class Persona {
         String nombre;
         int edad;
 
@@ -46,4 +46,3 @@ package tema3;
 
     }
 
-*/
