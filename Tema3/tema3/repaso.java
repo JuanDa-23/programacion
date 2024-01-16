@@ -10,32 +10,41 @@ public class repaso {
 
 
     public static void main(String[] args) {
-        System.out.println("Introduce un número : ");
-        int n1 = in.nextInt();
-        System.out.println("Introduce otro número : ");
-        int n2 = in.nextInt();
-        System.out.println("Introduce el calculo que desee hacer: (S = +, R = -, M = *, D = /, A = % o E = Salir)");
-        /*char option = in.next
+        boolean salir = false;
 
-        //while (option != 6) {
+
+        while (!salir) {
+            System.out.println("Introduce un número : ");
+            int n1 = in.nextInt();
+            System.out.println("Introduce otro número : ");
+            int n2 = in.nextInt();
+            System.out.println("Introduce el calculo que desee hacer: (S = +, R = -, M = *, D = /, A = % o E = Salir)");
+            char option = in.next().toUpperCase().charAt(0);
             switch (option) {
-                case 'a':
+                case 'S':
                     System.out.println(n1 + " + " + n2 + " = " + (n1 + n2));
                     break;
-                case 2:
+                case 'R':
                     System.out.println(n1 + " - " + n2 + " = " + (n1 - n2));
                     break;
-                case 3:
+                case 'M':
                     System.out.println(n1 + " * " + n2 + " = " + (n1 * n2));
                     break;
-                case 4:
+                case 'D':
                     System.out.println(n1 + " / " + n2 + " = " + (n1 / n2));
                     break;
-                case 5:
+                case 'A':
                     System.out.println(n1 + " % " + n2 + " = " + (n1 % n2));
+                    break;
+                case 'E':
+                    System.out.println("Saliste");
+                    salir = true;
+                    break;
+                default:
+                    System.out.println("Pon un parametro correcto");
                     break;
             }
 
-        //}*/
+        }
     }
 }

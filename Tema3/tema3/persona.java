@@ -1,6 +1,6 @@
 package tema3;
 
-    public class Persona {
+   /* public class Persona {
         String nombre;
         int edad;
 
@@ -35,7 +35,7 @@ package tema3;
             System.out.println("¡Hola " + nombre + "!");
         }
     }
-   
+
     public static void main(String[] args) { // En otro fichero
         Persona persona = new Persona();
         persona.nombre = "David";
@@ -46,3 +46,4 @@ package tema3;
 
     }
 
+*/
