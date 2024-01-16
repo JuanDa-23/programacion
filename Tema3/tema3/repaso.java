@@ -19,7 +19,7 @@ public class repaso {
 
         while (option != 6) {
             switch (option) {
-                case (1):
+                case ('a'):
                     System.out.println(n1 + " + " + n2 + " = " + (n1 + n2));
                     break;
                 case 2:
