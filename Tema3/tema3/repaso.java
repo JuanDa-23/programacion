@@ -13,8 +13,8 @@ public class repaso {
 
     }
 
-    public static boolean trueDate(int day,int mounth, int year) {
+   /* public static boolean trueDate(int day,int mounth, int year) {
 
-    }
+    }*/
 
 }
