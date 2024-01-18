@@ -6,25 +6,49 @@ public class repaso {
     static Scanner in = new Scanner(System.in);
 
     public static void main(String[] args) {
-        System.out.println("Introduce el tamaño: ");
-        int number = in.nextInt();
-        System.out.println("Introduce la letra: ");
-        char caracter = in.next().charAt(0);
-        madeTringle(number, caracter);
-    }
+        System.out.println("Introduce la letra para elegir el ejercicio: ");
+        char letter = in.next().toLowerCase().charAt(0);
 
-    public static void madeTringle(int number, char character) {
-        for (int i = 1; i <= number; i++) {
-            for (int j = 1; j <= number - i; j++) {
-                System.out.print(" ");
-            }
-            for (int k = 1; k <= 2 * i - 1; k++) {
-                System.out.print(character);
-            }
-            System.out.println();
+    }
+    public static char showMenu(char letter){
+      int result = 0;
+        switch (letter){
+            case 'a':
+
+                break;
+            case 'b':
+
+                break;
+            case 'c':
+
+                break;
+            case 'd':
+
+                break;
+            case 'e':
+
+                break;
+            case 'f':
+
+                break;
+            case 'g':
+
+                break;
+            case 'h':
+
+                break;
+            case 'i':
+
+                break;
+            case 'x':
+
+                break;
+            default:
+                System.out.println("Introduce un carácter: ");
         }
 
 
+        return result;
     }
 }
 
