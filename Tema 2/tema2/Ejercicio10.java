@@ -3,8 +3,9 @@ package tema2;
 import java.util.Scanner;
 
 public class Ejercicio10 {
+    static Scanner in = new Scanner(System.in);
+
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
         System.out.println("~MENÚ~");
         System.out.println("Introduce el número del ejercicio que desee:");
         int exercicie;
@@ -36,6 +37,7 @@ public class Ejercicio10 {
                     break;
                 case 8:
                     Ejercicio8.main(args);
+
                     break;
                 case 9:
                     Ejercicio9.main(args);
@@ -50,7 +52,7 @@ public class Ejercicio10 {
 
     }
 
-    public static void showMenu() {
+    public static char showMenu() {
         System.out.println("0) SALIR.\n" +
                 "1) Muestra el signo de un número introducido por el usuario.\n" +
                 "2) Indica si el usuario es mayor de edad o no.\n" +
@@ -62,7 +64,8 @@ public class Ejercicio10 {
                 "8) Comprobador de fechas.\n" +
                 "9) Dibujar triángulos.");
 
-
+        char menu = in.next().charAt(0);
+        return menu;
     }
 
 }
