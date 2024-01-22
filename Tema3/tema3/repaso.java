@@ -15,7 +15,7 @@ public class repaso {
         System.out.println(minArray(array));
         System.out.println(mediaArray(array));
         System.out.println(existeArray(array));
-
+        //System.out.println(sumaArrays(array));
     }
 
     public static void creatArray() {
@@ -66,6 +66,17 @@ public class repaso {
         }
         return existe;
     }
+   /* public static int[] sumaArrays(int[] array) {
+        System.out.println("Introduce los valores de otra Array: ");
+        int array2[] = new int[array.length];
+        int result[] = new int[array.length];
+        for (int i = 0; i < array.length; i++) {
+         result[i] = array[i] + array2[i];
+         //¿Por qué 4 = 3 + 1 es correcto, pero 1 + 3 = 4 no?
+        }
+      return result;
+    }*/
+
 }
 
 
