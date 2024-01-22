@@ -12,8 +12,8 @@ public class repaso {
         creatArray();
         System.out.println(maxArray(array));
         System.out.println(minArray(array));
-
-
+        System.out.println(mediaArray(array));
+        System.out.println(existeArray(array));
 
     }
 
@@ -42,7 +42,27 @@ public class repaso {
         }
         return min;
     }
+    public static int mediaArray(int array[]){
+        int suma = array[0];
+        for (int i = 0; i < array.length; i++) {
+            suma += array[i] / 2;
 
+        }
+        return suma;
+    }
+    public static boolean existeArray(int array[]){
+        System.out.println("Introduce un valor: ");
+        int number = in.nextInt();
+        boolean existe = false;
+        for (int i = 0; i < array.length; i++) {
+           if (number == array[i]) {
+               existe = true;
+           }
+
+
+        }
+        return existe;
+    }
 }
 
 
