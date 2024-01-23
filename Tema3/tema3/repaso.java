@@ -1,28 +1,34 @@
 package tema3;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class repaso {
     static Scanner in = new Scanner(System.in);
-    static int[] array = new int[6];
 
     public static void main(String[] args) {
         //System.out.println("Introduce la letra para elegir el ejercicio: ");
         //char letter = in.next().toLowerCase().charAt(0);
 
-        creatArray();
+        int[] array = createArray(6);
+        int[] array2 = createArray(6);
+
         System.out.println(maxArray(array));
         System.out.println(minArray(array));
         System.out.println(mediaArray(array));
         System.out.println(existeArray(array));
-        //System.out.println(sumaArrays(array));
+        System.out.println(Arrays.toString(sumaArrays(array, array)));
+
+
     }
 
-    public static void creatArray() {
+    public static int[] createArray(int size) {
+        int[] array = new int[size];
         System.out.println("Introduce los valores del array: ");
         for (int i = 0; i < array.length; i++) {
             array[i] = in.nextInt();
         }
+        return array;
 
     }
 
@@ -66,18 +72,18 @@ public class repaso {
         }
         return existe;
     }
-   /* public static int[] sumaArrays(int[] array) {
-        System.out.println("Introduce los valores de otra Array: ");
-        int array2[] = new int[array.length];
-        int result[] = new int[array.length];
-        for (int i = 0; i < array.length; i++) {
-         result[i] = array[i] + array2[i];
-         //¿Por qué 4 = 3 + 1 es correcto, pero 1 + 3 = 4 no?
+
+    public static int[] sumaArrays(int[] array, int[] array2) {
+        int[] result = new int[array.length];
+        if (array2.length == array.length) {
+            for (int i = 0; i < array.length; i++) {
+                result[i] = array[i] + array2[i];
+            }
         }
-      return result;
-    }*/
+        return result;
+    }
 
 }
 
 
-
+// 4 = 3 + 1 es correcto
