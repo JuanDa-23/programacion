@@ -17,7 +17,8 @@ public class repaso {
         System.out.println(minArray(array));
         System.out.println(mediaArray(array));
         System.out.println(existeArray(array));
-        System.out.println(Arrays.toString(sumaArrays(array, array)));
+        System.out.println(Arrays.toString(sumaArrays(array, array2)));
+        System.out.println(Arrays.toString(restaArrays(array, array2)));
 
 
     }
@@ -82,8 +83,19 @@ public class repaso {
         }
         return result;
     }
+    public static int[] restaArrays(int[] array, int[] array2) {
+        int[] result = new int[array.length];
+        if (array2.length == array.length) {
+            for (int i = 0; i < array.length; i++) {
+                result[i] = array[i] - array2[i];
+            }
+        }
+        return result;
+    }
 
 }
 
 
 // 4 = 3 + 1 es correcto
+//.toString => hacer el Array bonito
+//if (array2.length == array.length) => igualar indices
