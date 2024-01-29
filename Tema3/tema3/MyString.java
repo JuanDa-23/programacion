@@ -113,7 +113,7 @@ public class MyString {
                     showHowManyVocals(string1);
                     break;
                 case 'c':
-                    String palabraMasLarga = MyString.palabraMasLarga(string1);
+                     String palabraMasLarga = MyString.palabraMasLarga(string1);
                     System.out.println("La palabra más larga: " + palabraMasLarga);
                     break;
                 case 'd':
